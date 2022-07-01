@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ setOpen, isOpen }) => {
 	const ulList = {
@@ -27,43 +27,47 @@ const Navbar = ({ setOpen, isOpen }) => {
 				className="font-display leading-tight flex flex-col h-full justify-around text-center font-medium"
 			>
 				{/* <motion.div className="overflow-hidden"> */}
-				<motion.a
-					variants={item}
-					transition={{ delay: 0.6 }}
-					className="uppercase text-9xl cursor-pointer"
-				>
-					<span className="link link-underline link-underline-white text-white">
+				<Link to="/">
+					<motion.span
+						onClick={() => setOpen(false)}
+						variants={item}
+						transition={{ delay: 0.6 }}
+						className="link link-underline link-underline-white text-white uppercase text-9xl cursor-pointer"
+					>
 						home
-					</span>
-				</motion.a>
+					</motion.span>
+				</Link>
 				{/* </motion.div> */}
-				<motion.a
-					variants={item}
-					transition={{ delay: 0.6 }}
-					className="uppercase text-9xl cursor-pointer"
-				>
-					<span className="link link-underline link-underline-white text-white">
+				<Link to="/works">
+					<motion.span
+						onClick={() => setOpen(false)}
+						variants={item}
+						transition={{ delay: 0.6 }}
+						className="link link-underline link-underline-white text-white uppercase text-9xl cursor-pointer"
+					>
 						works
-					</span>
-				</motion.a>
-				<motion.a
-					variants={item}
-					transition={{ delay: 0.6 }}
-					className="uppercase text-9xl cursor-pointer"
-				>
-					<span className="link link-underline link-underline-white text-white">
+					</motion.span>
+				</Link>
+				<Link to="/aboutme">
+					<motion.span
+						onClick={() => setOpen(false)}
+						variants={item}
+						transition={{ delay: 0.6 }}
+						className="link link-underline link-underline-white text-white uppercase text-9xl cursor-pointer"
+					>
 						about me
-					</span>
-				</motion.a>
-				<motion.a
-					variants={item}
-					transition={{ delay: 0.6 }}
-					className="uppercase text-9xl cursor-pointer"
-				>
-					<span className="link link-underline link-underline-white text-white">
+					</motion.span>
+				</Link>
+				<Link to="/contact">
+					<motion.span
+						onClick={() => setOpen(false)}
+						variants={item}
+						transition={{ delay: 0.6 }}
+						className="link link-underline link-underline-white text-white uppercase text-9xl cursor-pointer"
+					>
 						contact
-					</span>
-				</motion.a>
+					</motion.span>
+				</Link>
 			</motion.div>
 		</motion.div>
 	);
