@@ -22,7 +22,7 @@ const Home = () => {
 	return (
 		<motion.div
 			onWheel={(e) => {
-				e.deltaY === 125 && navigate('/works');
+				e.deltaY >= 0 && navigate('/works');
 			}}
 			exit={{ y: '-100vh' }}
 			transition={{ delay: 0.2, duration: 0.7 }}
@@ -100,3 +100,10 @@ const Home = () => {
 };
 
 export default Home;
+
+/* 
+https://docs.google.com/forms/u/0/d/e/1FAIpQLSeFNNpXUSpjEn8jefk1wtP5BUVKyx_qbdFHLTtoFtywrZCZDQ/formResponse
+
+Modifier votre réponse
+https://docs.google.com/forms/u/0/d/e/1FAIpQLSeFNNpXUSpjEn8jefk1wtP5BUVKyx_qbdFHLTtoFtywrZCZDQ/viewform?usp=form_confirm&edit2=2_ABaOnue2QZezRH8f5EQ94B-0p1Jf6kog6sIpbcvz2UQFUBRuPrNP_1v5LSH5i72Sc_26CcM
+ */

@@ -8,7 +8,7 @@ const Works = () => {
 	return (
 		<div
 			onWheel={(e) => {
-				e.deltaY === 125 ? navigate('/aboutme') : navigate('/');
+				e.deltaY >= 0 ? navigate('/aboutme') : navigate('/');
 			}}
 			className="flex h-[38rem] space-x-5 mt-14 overflow-hidden"
 		>

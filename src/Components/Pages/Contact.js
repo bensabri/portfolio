@@ -7,7 +7,7 @@ const Contact = () => {
 	return (
 		<motion.div
 			onWheel={(e) => {
-				e.deltaY === -125 && navigate('/aboutme');
+				e.deltaY < 0 && navigate('/aboutme');
 			}}
 			exit={{
 				y: '100vh',

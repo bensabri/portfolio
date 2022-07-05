@@ -8,7 +8,7 @@ const AboutMe = () => {
 	return (
 		<motion.div
 			onWheel={(e) => {
-				e.deltaY === 125 ? navigate('/contact') : navigate('/works');
+				e.deltaY >= 0 ? navigate('/contact') : navigate('/works');
 			}}
 			exit={{
 				y: location.pathname === '/contact' ? '-100vh' : '100vh',
