@@ -4,63 +4,38 @@ import Contact from './Pages/Contact';
 import Works from './Pages/Works';
 import AboutMe from './Pages/AboutMe';
 import { AnimatePresence } from 'framer-motion';
+import { useSwipeable } from 'react-swipeable';
 import { useState } from 'react';
 
 const AnimatedRoute = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
 
-	const [touchStart, setTouchStart] = useState(null);
-	const [touchEnd, setTouchEnd] = useState(null);
-
-	// the required distance between touchStart and touchEnd to be detected as a swipe
-	const minSwipeDistance = 20;
-
-	const onTouchStart = (e) => {
-		setTouchEnd(null); // otherwise the swipe is fired even with usual touch events
-		setTouchStart(e.targetTouches[0].clientY);
-	};
-
-	const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
-
-	const onTouchEnd = () => {
-		if (!touchStart || !touchEnd) return;
-		const distance = touchStart - touchEnd;
-		const isSwipeUp = distance > minSwipeDistance;
-		const isSwipeDown = distance < -minSwipeDistance;
-		if (isSwipeUp || isSwipeDown) {
-			console.log('swipe', isSwipeUp ? 'up' : 'down');
-			switch (location.pathname) {
-				case '/':
-					isSwipeUp && navigate('/works');
-					break;
-				case '/works':
-					isSwipeUp && navigate('/aboutme');
-					isSwipeDown && navigate('/');
-					break;
-				case '/aboutme':
-					isSwipeUp && navigate('/contact');
-					isSwipeDown && navigate('/works');
-					break;
-				case '/contact':
-					isSwipeUp && navigate('/aboutme');
-					break;
-				default:
-					break;
+	const handlers = useSwipeable({
+		onSwipedUp: () => {
+			if (location.pathname === '/') {
+				navigate('/works');
+			} else if (location.pathname === '/works') {
+				navigate('/aboutme');
+			} else {
+				navigate('/contact');
 			}
+		},
+		onSwipedDown: () => {
+			if (location.pathname === '/contact') {
+				navigate('/aboutme');
+			} else if (location.pathname === '/aboutme') {
+				navigate('/works');
+			} else {
+				navigate('/');
+			}
+		},
+		preventDefaultTouchmoveEvent: true,
+		trackMouse: true,
+	});
 
-			// isSwipeUp && navigate('/works');
-		}
-		// add your conditional logic here
-	};
-	// console.log(location.pathname);
 	return (
-		<div
-			className="h-full"
-			onTouchStart={onTouchStart}
-			onTouchMove={onTouchMove}
-			onTouchEnd={onTouchEnd}
-		>
+		<div className="h-full" {...handlers}>
 			<AnimatePresence>
 				<Routes location={location} key={location.pathname}>
 					<Route path="/" element={<Home />} />
