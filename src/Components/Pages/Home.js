@@ -100,13 +100,3 @@ const Home = () => {
 };
 
 export default Home;
-
-/* 
-https://docs.google.com/forms/u/0/d/e/1FAIpQLSeFNNpXUSpjEn8jefk1wtP5BUVKyx_qbdFHLTtoFtywrZCZDQ/formResponse
-
-Modifier votre réponse
-https://docs.google.com/forms/u/0/d/e/1FAIpQLSeFNNpXUSpjEn8jefk1wtP5BUVKyx_qbdFHLTtoFtywrZCZDQ/viewform?usp=form_confirm&edit2=2_ABaOnue2QZezRH8f5EQ94B-0p1Jf6kog6sIpbcvz2UQFUBRuPrNP_1v5LSH5i72Sc_26CcM
-dns10.ovh.net
-ns10.ovh.net 
-
-*/
