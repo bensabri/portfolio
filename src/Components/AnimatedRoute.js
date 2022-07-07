@@ -5,7 +5,6 @@ import Works from './Pages/Works';
 import AboutMe from './Pages/AboutMe';
 import { AnimatePresence } from 'framer-motion';
 import { useSwipeable } from 'react-swipeable';
-import { useState } from 'react';
 
 const AnimatedRoute = () => {
 	const location = useLocation();
@@ -35,7 +34,7 @@ const AnimatedRoute = () => {
 	});
 
 	return (
-		<div className="h-full" {...handlers}>
+		<div className="overscroll-contain h-full" {...handlers}>
 			<AnimatePresence>
 				<Routes location={location} key={location.pathname}>
 					<Route path="/" element={<Home />} />

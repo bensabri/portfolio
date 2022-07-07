@@ -22,7 +22,7 @@ const Contact = () => {
 					initial={{ x: '-100vw' }}
 					animate={{ x: 0 }}
 					transition={{ delay: 0.7, duration: 0.7 }}
-					className="font-medium capitelize text-6xl md:text-7xl lg:text-8xl leading-[6.5rem] tracking-wider"
+					className="font-medium capitelize text-5xl md:text-7xl lg:text-8xl leading-[6.5rem] tracking-wider"
 				>
 					<br />
 					Get In Touch{' '}

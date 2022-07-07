@@ -10,7 +10,7 @@ const Works = () => {
 			onWheel={(e) => {
 				e.deltaY >= 0 ? navigate('/aboutme') : navigate('/');
 			}}
-			className="flex h-[38rem] space-x-5 mt-14 overflow-hidden"
+			className="flex h-full space-x-5 mt-14 overflow-hidden"
 		>
 			{projectList?.map(
 				({ title, description, projectNum, image, url }, i) => (

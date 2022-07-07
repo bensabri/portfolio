@@ -16,7 +16,7 @@ const AboutMe = () => {
 			}}
 			initial={{ y: '100vh' }}
 			animate={{ y: 0, transition: { delay: 0.2, duration: 0.7 } }}
-			className="flex flex-col md:flex-row items-center justify-center whitespace-nowrap h-5/6 relative"
+			className="flex flex-col md:flex-row items-center justify-center whitespace-nowrap h-full relative"
 		>
 			<div className="absolute top-[2rem] space-y-10">
 				<motion.h1
@@ -40,9 +40,9 @@ const AboutMe = () => {
 					initial={{ x: '-100vw' }}
 					animate={{ x: 0 }}
 					transition={{ delay: 0.8, duration: 0.7 }}
-					className="space-y-3 text-xl lg:text-2xl tracking-widest leading-[3rem] break-words"
+					className="space-y-3 text-lg lg:text-2xl tracking-widest leading-[3rem] break-words"
 				>
-					<h2 className="text-4xl">FullStack developer</h2>
+					<h2 className="text-3xl">FullStack developer</h2>
 					<p>React, NextJs, TailwindCss</p>
 					<p>Strapi, GraphQl, RestApi, Firebase</p>
 				</motion.div>

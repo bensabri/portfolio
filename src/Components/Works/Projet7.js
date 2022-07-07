@@ -14,7 +14,7 @@ const Projet7 = () => {
 			}}
 			initial={{ y: '100vh' }}
 			animate={{ y: 0 }}
-			className="flex items-center justify-center whitespace-nowrap h-screen w-full relative"
+			className="flex items-center justify-center whitespace-nowrap h-full w-full relative"
 		>
 			<div className="absolute top-[2rem] space-y-8 z-20">
 				<motion.h1

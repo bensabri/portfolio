@@ -1,6 +1,5 @@
-import { motion, variants } from 'framer-motion';
-import { useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { useLocation, Link } from 'react-router-dom';
 
 const animateDiv = {
 	hidden: {
@@ -37,7 +36,7 @@ const Projet = ({ title, description, projectNum, image, url }) => {
 			variants={animateDiv}
 			initial="hidden"
 			animate="visible"
-			className="flex justify-center whitespace-nowrap w-full h-full"
+			className="flex justify-center whitespace-nowrap w-full h-5/6  "
 		>
 			<div className="absolute top-[2rem] space-y-8 z-20">
 				<motion.h1

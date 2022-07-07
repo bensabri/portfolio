@@ -26,13 +26,13 @@ const Home = () => {
 			}}
 			exit={{ y: '-100vh' }}
 			transition={{ delay: 0.2, duration: 0.7 }}
-			className="flex flex-col md:flex-row items-center  whitespace-nowrap mx-[8rem] h-5/6 "
+			className="flex flex-col md:flex-row items-center justify-center whitespace-nowrap h-5/6 relative"
 		>
-			<div className="space-y-10">
+			<div className="absolute top-[8rem] space-y-10 z-10">
 				<motion.h1
 					initial={{ x: '-100vw' }}
 					animate={{ x: 0 }}
-					transition={{ delay: 0.5, duration: 0.7 }}
+					transition={{ delay: 0.5, duration: 0.9 }}
 					className="font-medium uppercase text-6xl md:text-7xl lg:text-8xl leading-[6.5rem] tracking-wider"
 				>
 					<div className="space-y-2">
@@ -59,7 +59,7 @@ const Home = () => {
 				</motion.p>
 			</div>
 
-			<div className="relative">
+			<div className="relative z-0 opacity-40">
 				<motion.div
 					initial={{ x: '100vw', y: 40 }}
 					animate={{ x: 0 }}
