@@ -3,10 +3,12 @@ import { useLocation, Link } from 'react-router-dom';
 
 const animateDiv = {
 	hidden: {
-		y: '100%',
+		x: '100vw',
+		opacity: 0,
 	},
 	visible: {
-		y: 0,
+		x: 0,
+		opacity: 1,
 		transition: { delay: 0.2, duration: 0.7 },
 	},
 };
@@ -24,21 +26,42 @@ const animateTitle = {
 	},
 };
 
-const Projet = ({ title, description, projectNum, image, url }) => {
+const Projet = ({ title, description, projectNum, image, url, i }) => {
 	const location = useLocation();
 
 	return (
+		// <motion.div
+		// 	initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
+		// 	whileInView={{ opacity: 1, x: 0 }}
+		// 	exit={{
+		// 		y: location.pathname === '/aboutme' ? '-100vh' : '100vh',
+		// 		transition: { delay: 0.2, duration: 0.7 },
+		// 	}}
+		// 	transition={{ delay: i * 0.1, duration: 0.2 }}
+		// 	className="relative m-5 w-[11rem] cursor-pointer text-white p-[1rem] "
+		// >
+		// 	<h2>{title} </h2>
+		// 	<p>{description} </p>
+		// 	<img
+		// 		className="absolute top-0 right-0 left-0 w-full h-full object-cover rounded-lg"
+		// 		src={image}
+		// 		alt=""
+		// 	/>
+		// 	<div className="absolute top-0 right-0 left-0 w-full h-full hover:bg-[#051932] opacity-60 rounded-lg" />
+		// </motion.div>
+
 		<motion.div
 			exit={{
-				y: location.pathname === '/aboutme' ? '-100%' : '100%',
+				y: location.pathname === '/aboutme' ? '-100vh' : '100vh',
+				opacity: 0,
 				transition: { delay: 0.2, duration: 0.7 },
 			}}
 			variants={animateDiv}
 			initial="hidden"
 			animate="visible"
-			className="flex justify-center whitespace-nowrap w-full h-5/6  "
+			className="flex justify-center whitespace-nowrap w-full h-[28rem]"
 		>
-			<div className="absolute top-[2rem] space-y-8 z-20">
+			<div className="absolute -top-[4rem] space-y-10 z-20 ">
 				<motion.h1
 					initial="hidden"
 					animate="visible"
@@ -78,25 +101,25 @@ const Projet = ({ title, description, projectNum, image, url }) => {
 					</Link>
 				</div>
 			</div>
-			<div className="cursor:pointer opacity-50">
-				<motion.div
-					initial={{
-						x: '-100vw',
-					}}
-					animate={{
-						x: 0,
-						transition: { duration: 0.7, delay: 1 },
-					}}
-					exit={{
-						x: '100vh',
-						transition: { duration: 1 },
-					}}
-					whileHover={{ scale: 1.15 }}
+			{/* <div className="opacity-50">
+				<div
+					// initial={{
+					// 	x: '-100vw',
+					// }}
+					// animate={{
+					// 	x: 0,
+					// 	transition: { duration: 0.7, delay: 1 },
+					// }}
+					// exit={{
+					// 	x: '100vh',
+					// 	transition: { duration: 1 },
+					// }}
+					// whileHover={{ scale: 1.15 }}
 					className="w-[13rem] md:w-[15rem] lg:w-[18rem] ml-[15rem]"
 				>
-					<img className="" src={image} alt="" />
-				</motion.div>
-			</div>
+				</div>
+			</div> */}
+			<img className="opacity-50 object-contain" src={image} alt="" />
 		</motion.div>
 	);
 };

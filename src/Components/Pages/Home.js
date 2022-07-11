@@ -58,7 +58,6 @@ const Home = () => {
 					FullStack Developer / <br /> UI/UX Designer.{' '}
 				</motion.p>
 			</div>
-
 			<div className="relative z-0 opacity-40">
 				<motion.div
 					initial={{ x: '100vw', y: 40 }}

@@ -16,4 +16,32 @@ export const projectList = [
 		image: photo7,
 		url: 'https://www.medinah-store.com',
 	},
+	{
+		title: 'Market Place',
+		description: 'Ecommerce Store',
+		projectNum: 7,
+		image: photo7,
+		url: 'https://www.medinah-store.com',
+	},
+	{
+		title: 'Market Place',
+		description: 'Ecommerce Store',
+		projectNum: 7,
+		image: photo7,
+		url: 'https://www.medinah-store.com',
+	},
+	{
+		title: 'Market Place',
+		description: 'Ecommerce Store',
+		projectNum: 7,
+		image: photo7,
+		url: 'https://www.medinah-store.com',
+	},
+	{
+		title: 'Market Place',
+		description: 'Ecommerce Store',
+		projectNum: 7,
+		image: photo7,
+		url: 'https://www.medinah-store.com',
+	},
 ];
