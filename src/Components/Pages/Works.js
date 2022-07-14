@@ -3,8 +3,9 @@ import Projet from '../Works/Projet';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
+
 import { RiArrowRightSLine, RiArrowLeftSLine } from 'react-icons/ri';
+import { motion } from 'framer-motion';
 
 const Works = () => {
 	const navigate = useNavigate();
@@ -19,14 +20,16 @@ const Works = () => {
 	};
 
 	return (
-		<div
+		<motion.div
 			onWheel={(e) => {
 				e.deltaY >= 0 ? navigate('/aboutme') : navigate('/');
 			}}
+			exit={{ y: '-100vh' }}
+			transition={{ delay: 0.2, duration: 0.7 }}
 			className="bg- mt-24 flex flex-wrap justify-around max-w-2xl my-0 mx-auto"
 		>
 			<Carousel
-				showIndicators={true}
+				showIndicators={false}
 				showStatus={false}
 				showArrows={true}
 				showThumbs={false}
@@ -66,7 +69,7 @@ const Works = () => {
 					)
 				)}
 			</Carousel>
-		</div>
+		</motion.div>
 	);
 };
 

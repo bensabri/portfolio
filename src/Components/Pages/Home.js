@@ -1,4 +1,4 @@
-import { animate, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import galaxy from '../../assets/Galaxy 2.png';
 import { useNavigate } from 'react-router-dom';
