@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useLocation, Link } from 'react-router-dom';
 
-const Projet = ({ title, description, projectNum, image, url }) => {
+const Projet = ({ title, description, projectNum, image, url, stack }) => {
 	const location = useLocation();
 
 	return (
@@ -50,6 +50,8 @@ const Projet = ({ title, description, projectNum, image, url }) => {
 				>
 					Projet {projectNum} <br /> {description.slice(0, 30)} <br />{' '}
 					{description.slice(30, 60)}
+					<br />
+					Stack: {stack}
 				</motion.p>
 				<div className="hover:-translate-y-1 transition-all ">
 					<Link to={url}>
@@ -67,7 +69,7 @@ const Projet = ({ title, description, projectNum, image, url }) => {
 			{image && (
 				<div className="opacity-30 object-contain w-[26rem]">
 					<motion.img
-						initial={{ opacity: 0, x: 100 }}
+						initial={{ opacity: 0, x: -100 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ delay: 0.5, duration: 0.5 }}
 						src={image}

@@ -60,12 +60,23 @@ const Works = () => {
 					}
 				>
 					{projectList?.map(
-						({ title, description, projectNum, image, url }, i) => (
+						(
+							{
+								title,
+								description,
+								projectNum,
+								image,
+								url,
+								stack,
+							},
+							i
+						) => (
 							<Projet
 								key={i}
 								i={i}
 								title={title}
 								description={description}
+								stack={stack}
 								projectNum={projectNum}
 								image={image}
 								url={url}

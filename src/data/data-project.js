@@ -9,7 +9,8 @@ import photo7 from '../assets/medinah-1.png';
 export const projectList = [
 	{
 		title: ['c', 'i', 't', 'y', ' ', 'b', 'i', 'k', 'e'],
-		description: 'site web pour location de vélo',
+		description: 'site web de location de vélo',
+		stack: 'vanila javascript',
 		projectNum: 1,
 		image: photo1,
 		url: 'https://app.netlify.com/sites/citybikev1',
@@ -17,6 +18,7 @@ export const projectList = [
 	{
 		title: ['i', 'm', 'm', 'o', 'b', 'i', 'l', 'i', 'e', 'r'],
 		description: 'site web pour immobilliers',
+		stack: 'wordpress',
 		projectNum: 2,
 		image: photo2,
 		url: 'https://jerbaimmo.com',
@@ -24,13 +26,16 @@ export const projectList = [
 	{
 		title: ['m', 'é', 't', 'e', 'o', '-', 'l', 'i', 'v', 'e'],
 		description: 'Application web méteo avec video live',
+		stack: 'react',
 		projectNum: 3,
 		image: photo3,
 		url: 'https://weather-app-livevideo.netlify.app',
 	},
 	{
 		title: ['i', 'n', 'f', 'm', '-', 'l', 'i', 'v', 'e'],
-		description: 'Application web de video pour les utilisateurs inscrits',
+		description:
+			'Espace membre externe pour le site infm.fr qui donne accès à des vidéos de formations premium',
+		stack: 'react, firebase',
 		projectNum: 4,
 		image: photo4,
 		url: 'infm-live.fr',
@@ -38,6 +43,7 @@ export const projectList = [
 	{
 		title: ['v', 'o', 't', 'e', '-', 'u', 'n', 's', 'a'],
 		description: 'Application web de vote',
+		stack: 'react, firebase',
 		projectNum: 5,
 		image: photo5,
 		url: 'https://unsa-fcs.fr/resultas',
@@ -45,6 +51,7 @@ export const projectList = [
 	{
 		title: ['c', 'r', 'e', 'p', 'e', 's'],
 		description: 'Ordering App',
+		stack: 'nextJs, strapi, graphQl',
 		projectNum: 6,
 		image: photo6,
 		url: 'https://crepes-ashy.vercel.app/',
@@ -52,6 +59,7 @@ export const projectList = [
 	{
 		title: ['m', 'a', 'r', 'k', 'e', 't', ' ', 'p', 'l', 'a', 'c', 'e'],
 		description: 'Ecommerce Store',
+		stack: 'nextJs, strapi, graphQl',
 		projectNum: 7,
 		image: photo7,
 		url: 'https://www.medinah-store.com',
