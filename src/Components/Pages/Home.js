@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import galaxy from '../../assets/Galaxy 2.png';
 import { useNavigate } from 'react-router-dom';
+import { lastName, firstName } from '../../data/data-names';
 
 const Home = () => {
 	const [mousePosition, setMousePosition] = useState({ x: null, y: null });
@@ -26,20 +27,34 @@ const Home = () => {
 			}}
 			exit={{ y: '-100vh' }}
 			transition={{ delay: 0.2, duration: 0.7 }}
-			className="flex flex-col md:flex-row items-center justify-center whitespace-nowrap h-5/6 relative"
+			className="flex flex-col md:flex-row items-center justify-center whitespace-nowrap h-full relative"
 		>
-			<div className="absolute top-[8rem] space-y-10 z-10">
-				<motion.h1
-					initial={{ x: '-100vw' }}
-					animate={{ x: 0 }}
-					transition={{ delay: 0.5, duration: 0.9 }}
-					className="font-medium uppercase text-6xl md:text-7xl lg:text-8xl leading-[6.5rem] tracking-wider"
-				>
-					<div className="space-y-2">
-						<p>Ben ayed</p>
-						<p>sabri</p>
-					</div>
-				</motion.h1>
+			<div className="absolute top-[8rem] space-y-8 z-10 font-medium text-6xl md:text-7xl lg:text-8xl leading-[6.5rem] tracking-wider">
+				<div className="flex items-center uppercase">
+					{firstName.map((item, i) => (
+						<motion.h2
+							key={i}
+							initial={{ opacity: 0, x: -100 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							transition={{ delay: i * 0.2, duration: 0.5 }}
+						>
+							{item}
+						</motion.h2>
+					))}
+				</div>
+				<div className="flex items-center uppercase">
+					{lastName.map((item, i) => (
+						<motion.h2
+							key={i}
+							initial={{ opacity: 0, x: -100 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							transition={{ delay: i * 0.1, duration: 0.5 }}
+						>
+							{item}
+						</motion.h2>
+					))}
+				</div>
+
 				<motion.div
 					initial={{ x: '-100vw' }}
 					animate={{ x: 0 }}
@@ -58,7 +73,7 @@ const Home = () => {
 					FullStack Developer / <br /> UI/UX Designer.{' '}
 				</motion.p>
 			</div>
-			<div className="relative z-0 opacity-40">
+			<div className="relative z-0 ">
 				<motion.div
 					initial={{ x: '100vw', y: 40 }}
 					animate={{ x: 0 }}
@@ -71,7 +86,7 @@ const Home = () => {
 						}}
 						exit={{ x: '100vw', transition: { duration: 1 } }}
 					>
-						<img src={galaxy} alt="" />
+						<img src={galaxy} alt="" className="opacity-40" />
 					</motion.div>
 				</motion.div>
 
@@ -88,7 +103,7 @@ const Home = () => {
 						}}
 						transition={{ duration: 1 }}
 						exit={{ x: '100vw' }}
-						className="absolute right-[30%] xl:-top-[7rem] font-extrabold tracking-widest text-[#ff4d5a] uppercase text-lg lg:text-2xl xl:text-5xl"
+						className="absolute right-[10%] xl:-top-[7rem] font-extrabold tracking-widest text-[#ff4d5a] uppercase text-lg lg:text-2xl xl:text-3xl"
 					>
 						portfolio
 					</motion.h2>

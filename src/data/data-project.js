@@ -1,5 +1,5 @@
 import photo6 from '../assets/pomme de pain crepes.png';
-import photo7 from '../assets/medinah 5.png';
+import photo7 from '../assets/medinah 1.png';
 
 export const projectList = [
 	{

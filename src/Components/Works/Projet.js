@@ -3,10 +3,10 @@ import { useLocation, Link } from 'react-router-dom';
 
 const animateDiv = {
 	hidden: {
-		scale: 0,
+		x: '100vw',
 	},
 	visible: {
-		scale: 1,
+		x: 1,
 
 		transition: { delay: 0.8, duration: 0.7 },
 	},
