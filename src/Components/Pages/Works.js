@@ -28,8 +28,8 @@ const Works = () => {
 			className="h-full flex justify-center items-center"
 		>
 			<motion.div
-				// exit={{ y: '-100vh' }}
-				transition={{ delay: 0.2, duration: 0.7 }}
+				exit={{ opacity: 0 }}
+				transition={{ delay: 0.2, duration: 0.5 }}
 				className="max-w-2xl my-0"
 			>
 				<Carousel

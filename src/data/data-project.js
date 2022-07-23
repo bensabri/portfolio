@@ -1,51 +1,56 @@
-import photo6 from '../assets/pomme de pain crepes.png';
-import photo7 from '../assets/medinah 1.png';
+import photo1 from '../assets/city-bikev1.png';
+import photo2 from '../assets/jerba-immo.png';
+import photo3 from '../assets/weather-live.png';
+import photo4 from '../assets/infm-img.png';
+import photo5 from '../assets/vote-app-img.jpg';
+import photo6 from '../assets/pomme-de-pain-crepes.png';
+import photo7 from '../assets/medinah-1.png';
 
 export const projectList = [
 	{
-		title: 'city bike',
+		title: ['c', 'i', 't', 'y', ' ', 'b', 'i', 'k', 'e'],
 		description: 'site web pour location de vélo',
 		projectNum: 1,
-		// image: photo6,
+		image: photo1,
 		url: 'https://app.netlify.com/sites/citybikev1',
 	},
 	{
-		title: 'immobilier',
+		title: ['i', 'm', 'm', 'o', 'b', 'i', 'l', 'i', 'e', 'r'],
 		description: 'site web pour immobilliers',
 		projectNum: 2,
-		// image: photo6,
+		image: photo2,
 		url: 'https://jerbaimmo.com',
 	},
 	{
-		title: 'méteo',
+		title: ['m', 'é', 't', 'e', 'o', '-', 'l', 'i', 'v', 'e'],
 		description: 'Application web méteo avec video live',
 		projectNum: 3,
-		// image: photo6,
+		image: photo3,
 		url: 'https://weather-app-livevideo.netlify.app',
 	},
 	{
-		title: 'Infm app',
+		title: ['i', 'n', 'f', 'm', '-', 'l', 'i', 'v', 'e'],
 		description: 'Application web de video pour les utilisateurs inscrits',
 		projectNum: 4,
-		// image: photo6,
+		image: photo4,
 		url: 'infm-live.fr',
 	},
 	{
-		title: 'Vote unsa',
+		title: ['v', 'o', 't', 'e', '-', 'u', 'n', 's', 'a'],
 		description: 'Application web de vote',
 		projectNum: 5,
-		// image: photo6,
+		image: photo5,
 		url: 'https://unsa-fcs.fr/resultas',
 	},
 	{
-		title: 'Crepes',
+		title: ['c', 'r', 'e', 'p', 'e', 's'],
 		description: 'Ordering App',
 		projectNum: 6,
 		image: photo6,
 		url: 'https://crepes-ashy.vercel.app/',
 	},
 	{
-		title: 'Market Place',
+		title: ['m', 'a', 'r', 'k', 'e', 't', ' ', 'p', 'l', 'a', 'c', 'e'],
 		description: 'Ecommerce Store',
 		projectNum: 7,
 		image: photo7,

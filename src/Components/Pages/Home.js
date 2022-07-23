@@ -36,7 +36,7 @@ const Home = () => {
 							key={i}
 							initial={{ opacity: 0, x: -100 }}
 							whileInView={{ opacity: 1, x: 0 }}
-							transition={{ delay: i * 0.2, duration: 0.5 }}
+							transition={{ delay: i * 0.1, duration: 0.5 }}
 						>
 							{item}
 						</motion.h2>
@@ -46,7 +46,7 @@ const Home = () => {
 					{lastName.map((item, i) => (
 						<motion.h2
 							key={i}
-							initial={{ opacity: 0, x: -100 }}
+							initial={{ opacity: 0, x: 100 }}
 							whileInView={{ opacity: 1, x: 0 }}
 							transition={{ delay: i * 0.1, duration: 0.5 }}
 						>
@@ -58,15 +58,25 @@ const Home = () => {
 				<motion.div
 					initial={{ x: '-100vw' }}
 					animate={{ x: 0 }}
-					transition={{ delay: 0.55, duration: 0.7 }}
+					transition={{ delay: 0.3, duration: 0.7 }}
 				>
-					<div className="border-b-4 w-[5.5rem] rounded border-[#ff4d5a] mb-4"></div>
-					<div className="border-b-4 w-[5.5rem] rounded border-[#ff4d5a] ml-10"></div>
+					<motion.div
+						initial={{ opacity: 0, x: -100 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{ delay: 0.4, duration: 0.5 }}
+						className="border-b-4 w-[5.5rem] rounded border-[#ff4d5a] mb-4"
+					></motion.div>
+					<motion.div
+						initial={{ opacity: 0, x: -100 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{ delay: 0.5, duration: 0.5 }}
+						className="border-b-4 w-[5.5rem] rounded border-[#ff4d5a] ml-10"
+					></motion.div>
 				</motion.div>
 
 				<motion.p
-					initial={{ x: '-100vw' }}
-					animate={{ x: 0 }}
+					initial={{ opacity: 0, x: -100 }}
+					animate={{ opacity: 1, x: 0 }}
 					transition={{ delay: 0.8, duration: 0.7 }}
 					className="text-xl lg:text-2xl tracking-widest leading-[3rem] break-words"
 				>
