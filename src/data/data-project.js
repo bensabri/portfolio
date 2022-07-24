@@ -13,7 +13,7 @@ export const projectList = [
 		stack: 'vanila javascript',
 		projectNum: 1,
 		image: photo1,
-		url: 'https://app.netlify.com/sites/citybikev1',
+		url: 'https://citybikev1.netlify.app',
 	},
 	{
 		title: ['i', 'm', 'm', 'o', 'b', 'i', 'l', 'i', 'e', 'r'],
@@ -54,7 +54,7 @@ export const projectList = [
 		stack: 'nextJs, strapi, graphQl',
 		projectNum: 6,
 		image: photo6,
-		url: 'https://crepes-ashy.vercel.app/',
+		url: 'https://crepes-ashy.vercel.app',
 	},
 	{
 		title: ['m', 'a', 'r', 'k', 'e', 't', ' ', 'p', 'l', 'a', 'c', 'e'],

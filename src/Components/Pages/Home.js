@@ -29,6 +29,31 @@ const Home = () => {
 			transition={{ delay: 0.2, duration: 0.7 }}
 			className="flex flex-col md:flex-row items-center justify-center whitespace-nowrap h-full relative"
 		>
+			<motion.div
+				exit={{ y: '100vh', opacity: 0, transition: { duration: 0.8 } }}
+				initial={{ opacity: 0, y: '100vh' }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ delay: 0.8, duration: 1 }}
+				className="absolute top-[4rem] md:top-[16.4rem] -left-[4.9rem] cursor-pointer z-50"
+			>
+				<a className="link" onClick={() => navigate('/works')}>
+					<span className="link__arrow">
+						<span></span>
+						<span></span>
+					</span>
+					<span className="link__line"></span>
+					<span
+						// style={{
+						// 	// writingMode: 'vertical-rl',
+						// 	wordWrap: 'break-word',
+						// 	whiteSpace: 'normal',
+						// }}
+						className="uppercase text-sm tracking-widest"
+					>
+						Projects
+					</span>
+				</a>
+			</motion.div>
 			<div className="absolute top-[8rem] space-y-8 z-10 font-medium text-5xl md:text-7xl lg:text-8xl leading-[6.5rem] tracking-wider">
 				<div className="flex items-center uppercase">
 					{firstName.map((item, i) => (

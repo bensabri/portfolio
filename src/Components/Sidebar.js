@@ -7,7 +7,7 @@ const Sidebar = () => {
 			initial={{ x: '-100vw' }}
 			animate={{ x: 0 }}
 			transition={{ delay: 0.7, duration: 0.7 }}
-			className="absolute -bottom-28 md:top-[10rem] z-20 w-full md:w-[10rem]"
+			className="absolute -bottom-28 md:top-[10rem] w-full z-20 md:w-[7rem]"
 		>
 			<ul className="flex md:flex-col justify-around p-2 h-[11rem] md:h-[23rem] tracking-wider">
 				<NavLink
@@ -56,16 +56,3 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
-
-{
-	/* <p
-				style={{
-					writingMode: 'vertical-rl',
-					wordWrap: 'break-word',
-					whiteSpace: 'normal',
-				}}
-				className="fixed text-[1rem] bottom-[80px] leading-6 tracking-widest after:content-['content-none w-[2px] h-[64px] bg-white absolute bottom-[5rem] m-auto left-0']"
-			>
-				SCROLLDOWN
-			</p> */
-}

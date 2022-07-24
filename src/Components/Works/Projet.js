@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const Projet = ({ title, description, projectNum, image, url, stack }) => {
 	const location = useLocation();
@@ -57,7 +57,7 @@ const Projet = ({ title, description, projectNum, image, url, stack }) => {
 					<p className="text-left">Stack: {stack}</p>
 				</motion.div>
 				<div className="hover:-translate-y-1 transition-all">
-					<Link to={url}>
+					<a href={url} target="_blank">
 						<motion.button
 							initial={{ opacity: 0, x: -100 }}
 							whileInView={{ opacity: 1, x: 0 }}
@@ -66,7 +66,7 @@ const Projet = ({ title, description, projectNum, image, url, stack }) => {
 						>
 							Visite
 						</motion.button>
-					</Link>
+					</a>
 				</div>
 			</div>
 			{image && (
