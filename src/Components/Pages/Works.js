@@ -30,7 +30,7 @@ const Works = () => {
 			<motion.div
 				exit={{ opacity: 0 }}
 				transition={{ delay: 0.2, duration: 0.5 }}
-				className="max-w-2xl my-0"
+				className="max-w-2xl py-6 my-0 rounded-[30px]"
 			>
 				<Carousel
 					showIndicators={false}

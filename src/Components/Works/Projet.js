@@ -42,18 +42,21 @@ const Projet = ({ title, description, projectNum, image, url, stack }) => {
 					></motion.div>
 				</div>
 
-				<motion.p
+				<motion.div
 					initial={{ opacity: 0, x: -100 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ delay: 0.3, duration: 0.5 }}
-					className="text-lg lg:text-xl tracking-widest leading-[3rem] break-words"
+					className="text-lg lg:text-xl tracking-widest leading-[3rem] space-y-2"
 				>
-					Projet {projectNum} <br /> {description.slice(0, 30)} <br />{' '}
-					{description.slice(30, 60)}
-					<br />
-					Stack: {stack}
-				</motion.p>
-				<div className="hover:-translate-y-1 transition-all ">
+					<h3 className="text-xl font-semibold text-left">
+						Projet {projectNum}
+					</h3>
+					<p className="text-left" title={description}>
+						{description.slice(0, 40)} ...
+					</p>
+					<p className="text-left">Stack: {stack}</p>
+				</motion.div>
+				<div className="hover:-translate-y-1 transition-all">
 					<Link to={url}>
 						<motion.button
 							initial={{ opacity: 0, x: -100 }}

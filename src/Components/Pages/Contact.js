@@ -41,7 +41,7 @@ const Contact = () => {
 					transition={{ delay: 0.8, duration: 0.7 }}
 					className="space-y-3 text-xl lg:text-2xl tracking-widest leading-[3rem] break-words"
 				>
-					<p>benasabri2@gmail.com</p>
+					<p>contact@sabri.dev</p>
 					<p>0651183041</p>
 				</motion.div>
 			</div>

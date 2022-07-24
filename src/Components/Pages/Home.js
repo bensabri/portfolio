@@ -29,7 +29,7 @@ const Home = () => {
 			transition={{ delay: 0.2, duration: 0.7 }}
 			className="flex flex-col md:flex-row items-center justify-center whitespace-nowrap h-full relative"
 		>
-			<div className="absolute top-[8rem] space-y-8 z-10 font-medium text-6xl md:text-7xl lg:text-8xl leading-[6.5rem] tracking-wider">
+			<div className="absolute top-[8rem] space-y-8 z-10 font-medium text-5xl md:text-7xl lg:text-8xl leading-[6.5rem] tracking-wider">
 				<div className="flex items-center uppercase">
 					{firstName.map((item, i) => (
 						<motion.h2
