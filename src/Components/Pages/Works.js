@@ -25,12 +25,12 @@ const Works = () => {
 			onWheel={(e) => {
 				e.deltaY >= 0 ? navigate('/aboutme') : navigate('/');
 			}}
-			className="h-full flex justify-center items-center"
+			className="h-full  flex justify-center items-center"
 		>
 			<motion.div
 				exit={{ opacity: 0 }}
 				transition={{ delay: 0.2, duration: 0.5 }}
-				className="max-w-2xl py-6 my-0 rounded-[30px]"
+				className="w-full  max-w-2xl py-6 my-0"
 			>
 				<Carousel
 					showIndicators={false}
