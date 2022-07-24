@@ -18,7 +18,7 @@ const Sidebar = () => {
 						} transition-all delay-350`
 					}
 				>
-					<li>Home</li>
+					<li>Accueil</li>
 				</NavLink>
 				<NavLink
 					to="/works"
@@ -28,7 +28,7 @@ const Sidebar = () => {
 						} transition-all delay-350`
 					}
 				>
-					<li>Works</li>
+					<li>Projets</li>
 				</NavLink>
 				<NavLink
 					to="/aboutme"
@@ -38,7 +38,7 @@ const Sidebar = () => {
 						} transition-all delay-350`
 					}
 				>
-					<li>About me</li>
+					<li>Profil</li>
 				</NavLink>
 				<NavLink
 					to="/contact"

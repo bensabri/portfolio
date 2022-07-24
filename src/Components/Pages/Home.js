@@ -30,7 +30,7 @@ const Home = () => {
 			className="flex flex-col md:flex-row items-center justify-center whitespace-nowrap h-full relative"
 		>
 			<motion.div
-				exit={{ y: '100vh', opacity: 0, transition: { duration: 0.8 } }}
+				exit={{ y: '100vh', opacity: 0, transition: { duration: 0.5 } }}
 				initial={{ opacity: 0, y: '100vh' }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ delay: 0.8, duration: 1 }}
@@ -42,15 +42,8 @@ const Home = () => {
 						<span></span>
 					</span>
 					<span className="link__line"></span>
-					<span
-						// style={{
-						// 	// writingMode: 'vertical-rl',
-						// 	wordWrap: 'break-word',
-						// 	whiteSpace: 'normal',
-						// }}
-						className="uppercase text-sm tracking-widest"
-					>
-						Projects
+					<span className="uppercase text-sm tracking-widest">
+						projets
 					</span>
 				</a>
 			</motion.div>

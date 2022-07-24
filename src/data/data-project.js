@@ -9,7 +9,7 @@ import photo7 from '../assets/medinah-1.png';
 export const projectList = [
 	{
 		title: ['c', 'i', 't', 'y', ' ', 'b', 'i', 'k', 'e'],
-		description: 'site web de location de vélo',
+		description: 'Site web de location de vélo',
 		stack: 'vanila javascript',
 		projectNum: 1,
 		image: photo1,
@@ -17,7 +17,7 @@ export const projectList = [
 	},
 	{
 		title: ['i', 'm', 'm', 'o', 'b', 'i', 'l', 'i', 'e', 'r'],
-		description: 'site web pour immobilliers',
+		description: 'Site web immobillier',
 		stack: 'wordpress',
 		projectNum: 2,
 		image: photo2,
@@ -38,7 +38,7 @@ export const projectList = [
 		stack: 'react, firebase',
 		projectNum: 4,
 		image: photo4,
-		url: 'infm-live.fr',
+		url: 'https://infm-live.fr',
 	},
 	{
 		title: ['v', 'o', 't', 'e', '-', 'u', 'n', 's', 'a'],
@@ -46,11 +46,11 @@ export const projectList = [
 		stack: 'react, firebase',
 		projectNum: 5,
 		image: photo5,
-		url: 'https://unsa-fcs.fr/resultas',
+		url: 'https://unsa-fcs.fr',
 	},
 	{
 		title: ['c', 'r', 'e', 'p', 'e', 's'],
-		description: 'Ordering App',
+		description: 'Application web pour commande des crêpes',
 		stack: 'nextJs, strapi, graphQl',
 		projectNum: 6,
 		image: photo6,
@@ -58,7 +58,8 @@ export const projectList = [
 	},
 	{
 		title: ['m', 'a', 'r', 'k', 'e', 't', ' ', 'p', 'l', 'a', 'c', 'e'],
-		description: 'Ecommerce Store',
+		description:
+			'Ecommerce store les vendeurs proposent leurs produits en vente',
 		stack: 'nextJs, strapi, graphQl',
 		projectNum: 7,
 		image: photo7,

@@ -32,9 +32,9 @@ const Navbar = ({ setOpen, isOpen }) => {
 						onClick={() => setOpen(false)}
 						variants={item}
 						transition={{ delay: 0.6 }}
-						className="link link-underline link-underline-white text-white uppercase text-8xl lg:text-9xl cursor-pointer"
+						className="link link-underline link-underline-white text-white uppercase text-7xl md:text-8xl lg:text-9xl cursor-pointer"
 					>
-						home
+						accueil
 					</motion.span>
 				</Link>
 				{/* </motion.div> */}
@@ -43,9 +43,9 @@ const Navbar = ({ setOpen, isOpen }) => {
 						onClick={() => setOpen(false)}
 						variants={item}
 						transition={{ delay: 0.6 }}
-						className="link link-underline link-underline-white text-white uppercase text-8xl lg:text-9xl cursor-pointer"
+						className="link link-underline link-underline-white text-white uppercase text-7xl md:text-8xl lg:text-9xl cursor-pointer"
 					>
-						works
+						projets
 					</motion.span>
 				</Link>
 				<Link to="/aboutme">
@@ -53,9 +53,9 @@ const Navbar = ({ setOpen, isOpen }) => {
 						onClick={() => setOpen(false)}
 						variants={item}
 						transition={{ delay: 0.6 }}
-						className="link link-underline link-underline-white text-white uppercase text-8xl lg:text-9xl cursor-pointer"
+						className="link link-underline link-underline-white text-white uppercase text-7xl md:text-8xl lg:text-9xl cursor-pointer"
 					>
-						about me
+						profil
 					</motion.span>
 				</Link>
 				<Link to="/contact">
@@ -63,7 +63,7 @@ const Navbar = ({ setOpen, isOpen }) => {
 						onClick={() => setOpen(false)}
 						variants={item}
 						transition={{ delay: 0.6 }}
-						className="link link-underline link-underline-white text-white uppercase text-8xl lg:text-9xl cursor-pointer"
+						className="link link-underline link-underline-white text-white uppercase text-7xl md:text-8xl lg:text-9xl cursor-pointer"
 					>
 						contact
 					</motion.span>
