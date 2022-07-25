@@ -16,7 +16,7 @@ const Navbar = ({ setOpen, isOpen }) => {
 			animate={{ y: isOpen ? 0 : '-100%' }}
 			initial={{ y: '-100%' }}
 			transition={{ duration: 0.4, ease: 'easeOut' }}
-			className={`z-30 overflow-y-hidden absolute top-0 right-0 w-full h-full bg-gradient-to-r from-[#082143] via-[#9C3075] to-[#FD4C5A]
+			className={`z-30 overflow-y-hidden absolute top-0 right-0 w-full h-full bg-gradient-to-r from-[#0F2027] via-[#203A43] to-[#2C5364]
 			`}
 		>
 			<motion.div

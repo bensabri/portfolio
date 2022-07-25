@@ -10,11 +10,11 @@ const Header = () => {
 
 	return (
 		<header>
-			<div className="z-40 relative px-8 flex items-end justify-between text-white">
+			<div className="z-40 relative px-8 flex items-center justify-between text-white">
 				<h2 className="tracking-wide hover:opacity-50 transition-opacity cursor-pointer">
 					Ben ayed Sabri
 				</h2>
-				<div className="z-50 flex items-center space-x-10">
+				<div className="z-50 flex items-center space-x-5 md:space-x-10">
 					<a
 						href={cvSabri}
 						className="font-bold hover:opacity-50 transition-opacity cursor-pointer"

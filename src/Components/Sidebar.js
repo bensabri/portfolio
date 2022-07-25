@@ -7,7 +7,7 @@ const Sidebar = () => {
 			initial={{ x: '-100vw' }}
 			animate={{ x: 0 }}
 			transition={{ delay: 0.7, duration: 0.7 }}
-			className="absolute -bottom-28 md:top-[10rem] w-full z-20 md:w-[7rem]"
+			className="absolute -bottom-28 md:top-[10rem] w-full z-10 md:w-[7rem]"
 		>
 			<ul className="flex md:flex-col justify-around p-2 h-[14.5rem] md:h-[23rem] tracking-wider">
 				<NavLink

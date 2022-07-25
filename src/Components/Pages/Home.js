@@ -34,7 +34,7 @@ const Home = () => {
 				initial={{ opacity: 0, y: '100vh' }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ delay: 0.8, duration: 1 }}
-				className="absolute top-[4rem] md:top-[16.4rem] -left-[4.9rem] cursor-pointer z-30"
+				className="absolute top-[4rem] md:top-[16.4rem] -left-[4.9rem] cursor-pointer z-20"
 			>
 				<a className="link" onClick={() => navigate('/works')}>
 					<span className="link__arrow">
@@ -47,7 +47,7 @@ const Home = () => {
 					</span>
 				</a>
 			</motion.div>
-			<div className="absolute top-[8rem] space-y-8 z-10 font-medium text-5xl md:text-7xl lg:text-8xl leading-[6.5rem] tracking-wider">
+			<div className="absolute top-[8rem] md:space-y-8 z-10 font-medium text-5xl md:text-7xl lg:text-8xl leading-[6.5rem] tracking-wider">
 				<div className="flex items-center uppercase">
 					{lastName.map((item, i) => (
 						<motion.h2
@@ -76,6 +76,7 @@ const Home = () => {
 					initial={{ x: '-100vw' }}
 					animate={{ x: 0 }}
 					transition={{ delay: 0.3, duration: 0.7 }}
+					className="my-2"
 				>
 					<motion.div
 						initial={{ opacity: 0, x: -100 }}
@@ -99,6 +100,17 @@ const Home = () => {
 				>
 					FullStack Developer / <br /> UI/UX Designer.{' '}
 				</motion.p>
+				<motion.h2
+					animate={{
+						x: 0 - +mousePosition.x / 30,
+						y: 0 - +mousePosition.y / 30,
+					}}
+					transition={{ duration: 1 }}
+					exit={{ x: '100vw' }}
+					className="ml-10 mt-4 md:mt-0 font-extrabold tracking-widest text-[#ff4d5a] uppercase text-lg lg:text-2xl xl:text-3xl"
+				>
+					portfolio
+				</motion.h2>
 			</div>
 			<div className="relative z-0 ">
 				<motion.div
@@ -113,27 +125,8 @@ const Home = () => {
 						}}
 						exit={{ x: '100vw', transition: { duration: 1 } }}
 					>
-						<img src={galaxy} alt="" className="opacity-40" />
+						<img src={galaxy} alt="" className="opacity-60" />
 					</motion.div>
-				</motion.div>
-
-				<motion.div
-					transition={{ delay: 1.2, duration: 1 }}
-					initial={{ scale: 0 }}
-					animate={{ scale: 1.4 }}
-					className=""
-				>
-					<motion.h2
-						animate={{
-							x: 0 - +mousePosition.x / 30,
-							y: 0 - +mousePosition.y / 30,
-						}}
-						transition={{ duration: 1 }}
-						exit={{ x: '100vw' }}
-						className="absolute right-[29%] top-[2rem] xl:-top-[2rem] font-extrabold tracking-widest text-[#ff4d5a] uppercase text-lg lg:text-2xl xl:text-3xl"
-					>
-						portfolio
-					</motion.h2>
 				</motion.div>
 			</div>
 		</motion.div>
