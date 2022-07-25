@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import galaxy from '../../assets/Galaxy 2.png';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { lastName, firstName } from '../../data/data-names';
 
 const Home = () => {
@@ -34,7 +34,7 @@ const Home = () => {
 				initial={{ opacity: 0, y: '100vh' }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ delay: 0.8, duration: 1 }}
-				className="absolute top-[4rem] md:top-[16.4rem] -left-[4.9rem] cursor-pointer z-50"
+				className="absolute top-[4rem] md:top-[16.4rem] -left-[4.9rem] cursor-pointer z-30"
 			>
 				<a className="link" onClick={() => navigate('/works')}>
 					<span className="link__arrow">
@@ -49,18 +49,6 @@ const Home = () => {
 			</motion.div>
 			<div className="absolute top-[8rem] space-y-8 z-10 font-medium text-5xl md:text-7xl lg:text-8xl leading-[6.5rem] tracking-wider">
 				<div className="flex items-center uppercase">
-					{firstName.map((item, i) => (
-						<motion.h2
-							key={i}
-							initial={{ opacity: 0, x: -100 }}
-							whileInView={{ opacity: 1, x: 0 }}
-							transition={{ delay: i * 0.1, duration: 0.5 }}
-						>
-							{item}
-						</motion.h2>
-					))}
-				</div>
-				<div className="flex items-center uppercase">
 					{lastName.map((item, i) => (
 						<motion.h2
 							key={i}
@@ -72,7 +60,18 @@ const Home = () => {
 						</motion.h2>
 					))}
 				</div>
-
+				<div className="flex items-center uppercase">
+					{firstName.map((item, i) => (
+						<motion.h2
+							key={i}
+							initial={{ opacity: 0, x: -100 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							transition={{ delay: i * 0.1, duration: 0.5 }}
+						>
+							{item}
+						</motion.h2>
+					))}
+				</div>
 				<motion.div
 					initial={{ x: '-100vw' }}
 					animate={{ x: 0 }}
@@ -109,7 +108,7 @@ const Home = () => {
 				>
 					<motion.div
 						animate={{
-							x: 0 - +mousePosition.x / 20,
+							x: 0 - +mousePosition.x / 30,
 							y: 40 - +mousePosition.y / 20,
 						}}
 						exit={{ x: '100vw', transition: { duration: 1 } }}
@@ -126,12 +125,12 @@ const Home = () => {
 				>
 					<motion.h2
 						animate={{
-							x: 0 - +mousePosition.x / 25,
-							y: 0 - +mousePosition.y / 25,
+							x: 0 - +mousePosition.x / 30,
+							y: 0 - +mousePosition.y / 30,
 						}}
 						transition={{ duration: 1 }}
 						exit={{ x: '100vw' }}
-						className="absolute right-[10%] xl:-top-[7rem] font-extrabold tracking-widest text-[#ff4d5a] uppercase text-lg lg:text-2xl xl:text-3xl"
+						className="absolute right-[29%] top-[2rem] xl:-top-[2rem] font-extrabold tracking-widest text-[#ff4d5a] uppercase text-lg lg:text-2xl xl:text-3xl"
 					>
 						portfolio
 					</motion.h2>

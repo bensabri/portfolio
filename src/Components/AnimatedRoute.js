@@ -5,6 +5,7 @@ import Works from './Pages/Works';
 import AboutMe from './Pages/AboutMe';
 import { AnimatePresence } from 'framer-motion';
 import { useSwipeable } from 'react-swipeable';
+import Sidebar from './Sidebar';
 
 const AnimatedRoute = () => {
 	const location = useLocation();
@@ -43,6 +44,7 @@ const AnimatedRoute = () => {
 					<Route path="/aboutme" element={<AboutMe />} />
 				</Routes>
 			</AnimatePresence>
+			<Sidebar />
 		</div>
 	);
 };

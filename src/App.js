@@ -21,7 +21,7 @@ function App() {
 					className="text-xl text-white h-full w-full bg-gradient-to-b from-[#061E3D] to-[#040E1A]"
 				>
 					<Header />
-					<Sidebar />
+					{/* <Sidebar /> */}
 					<AnimatedRoute />
 				</motion.div>
 			</Router>

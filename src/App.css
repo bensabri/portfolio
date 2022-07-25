@@ -21,3 +21,9 @@
 /* .control-prev:before {
 	content: url('./assets/arrow-left-image.png') !important;
 } */
+html,
+body {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+}
