@@ -2,8 +2,7 @@ import { Slant as Hamburger } from 'hamburger-react';
 import { useState } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import NavList from './NavList';
-import { Link } from 'react-router-dom';
-import cvSabri from '../assets/CV-SABRI-2.pdf';
+import cvSabri from '../assets/CV-SABRI-3.pdf';
 
 const Header = () => {
 	const [isOpen, setOpen] = useState(false);
