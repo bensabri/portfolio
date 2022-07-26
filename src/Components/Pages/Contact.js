@@ -30,9 +30,9 @@ const Contact = () => {
 				y: '100vh',
 				transition: { delay: 0.2, duration: 0.7 },
 			}}
-			className="flex flex-col md:flex-row items-center mt-20 md:mt-0 md:justify-center whitespace-nowrap h-full relative"
+			className="flex flex-col md:flex-row items-center justify-center whitespace-nowrap h-full relative"
 		>
-			<div className="space-y-8 z-10 font-medium text-5xl md:text-6xl lg:text-7xl leading-[6.5rem] tracking-wider">
+			<div className="absolute top-[8rem] space-y-8 z-10 font-medium text-5xl md:text-6xl lg:text-7xl leading-[6.5rem] tracking-wider">
 				<div className="flex justify-center uppercase">
 					{contact.map((item, i) => (
 						<motion.h2
@@ -46,10 +46,28 @@ const Contact = () => {
 					))}
 				</div>
 				<motion.div
+					initial={{ x: '-100vw' }}
+					animate={{ x: 0 }}
+					transition={{ delay: 0.3, duration: 0.7 }}
+				>
+					<motion.div
+						initial={{ opacity: 0, x: -100 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{ delay: 0.4, duration: 0.5 }}
+						className="border-b-4 w-[5.5rem] rounded border-[#ff4d5a] mb-4"
+					></motion.div>
+					<motion.div
+						initial={{ opacity: 0, x: -100 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{ delay: 0.5, duration: 0.5 }}
+						className="border-b-4 w-[5.5rem] rounded border-[#ff4d5a] ml-10"
+					></motion.div>
+				</motion.div>
+				<motion.div
 					initial={{ opacity: 0, x: -100 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ delay: 0.3, duration: 0.5 }}
-					className="flex space-x-3 text-xl lg:text-2xl tracking-widest leading-[3rem] break-words"
+					className="space-y-3 text-xl lg:text-2xl tracking-widest leading-[3rem] break-words"
 				>
 					<div className="flex items-center space-x-3">
 						<AiOutlineMail />
@@ -60,25 +78,7 @@ const Contact = () => {
 						<p>0651183041</p>
 					</div>
 				</motion.div>
-				<motion.div
-					initial={{ x: '-100vw' }}
-					animate={{ x: 0 }}
-					transition={{ delay: 0.3, duration: 0.7 }}
-				>
-					<motion.div
-						initial={{ opacity: 0, x: -100 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						transition={{ delay: 0.4, duration: 0.5 }}
-						className="border-b-4 w-[5.5rem] rounded border-[#ff4d5a] mb-4 ml-10"
-					></motion.div>
-					<motion.div
-						initial={{ opacity: 0, x: -100 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						transition={{ delay: 0.5, duration: 0.5 }}
-						className="border-b-4 w-[5.5rem] rounded border-[#ff4d5a] ml-20"
-					></motion.div>
-				</motion.div>
-				{sent ? (
+				{/* {sent ? (
 					<p className="text-lg">Message Envoyer</p>
 				) : (
 					<div className="mx-10">
@@ -148,7 +148,7 @@ const Contact = () => {
 							</div>
 						</motion.form>
 					</div>
-				)}
+				)} */}
 			</div>
 		</motion.div>
 	);

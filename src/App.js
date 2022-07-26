@@ -8,7 +8,7 @@ import AnimatedRoute from './Components/AnimatedRoute';
 
 function App() {
 	return (
-		<div className="bg-black h-screen overflow-hidden">
+		<div className="bg-black h-screen" style={{}}>
 			<Router>
 				<motion.div
 					initial={{ y: '-100%' }}

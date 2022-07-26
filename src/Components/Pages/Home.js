@@ -101,6 +101,8 @@ const Home = () => {
 					FullStack Developer / <br /> UI/UX Designer.{' '}
 				</motion.p>
 				<motion.h2
+					initial={{ scale: 0 }}
+					whileInView={{ scale: 1 }}
 					animate={{
 						x: 0 - +mousePosition.x / 30,
 						y: 0 - +mousePosition.y / 30,

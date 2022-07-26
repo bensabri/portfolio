@@ -35,7 +35,7 @@ const AnimatedRoute = () => {
 	});
 
 	return (
-		<div className="overscroll-contain h-full" {...handlers}>
+		<div className="h-full" {...handlers}>
 			<AnimatePresence>
 				<Routes location={location} key={location.pathname}>
 					<Route path="/" element={<Home />} />
