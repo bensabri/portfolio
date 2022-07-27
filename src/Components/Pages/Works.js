@@ -25,7 +25,7 @@ const Works = () => {
 			onWheel={(e) => {
 				e.deltaY >= 0 ? navigate('/aboutme') : navigate('/');
 			}}
-			className="h-full  flex justify-center items-center"
+			className="h-full flex justify-center items-center"
 		>
 			<motion.div
 				exit={{ opacity: 0 }}

@@ -11,9 +11,9 @@ const Projet = ({ title, description, projectNum, image, url, stack }) => {
 				opacity: 0,
 				transition: { delay: 0.2, duration: 0.7 },
 			}}
-			className="flex justify-center whitespace-nowrap w-full h-[28rem]"
+			className="flex justify-center  w-full h-[28rem]"
 		>
-			<div className="absolute top-[1rem] space-y-10 z-20">
+			<div className="absolute top-[1rem] space-y-5 md:space-y-10 z-20">
 				<div className="flex ml-3">
 					{title.map((item, i) => (
 						<motion.h1
@@ -21,7 +21,7 @@ const Projet = ({ title, description, projectNum, image, url, stack }) => {
 							initial={{ opacity: 0, x: -100 }}
 							whileInView={{ opacity: 1, x: 0 }}
 							transition={{ delay: i * 0.05, duration: 0.5 }}
-							className=" font-medium uppercase text-4xl md:text-7xl lg:text-7xl leading-[6.5rem] tracking-wider"
+							className=" font-medium uppercase text-4xl md:text-7xl lg:text-7xl  tracking-wider"
 						>
 							{item}
 						</motion.h1>
@@ -46,13 +46,13 @@ const Projet = ({ title, description, projectNum, image, url, stack }) => {
 					initial={{ opacity: 0, x: -100 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ delay: 0.3, duration: 0.5 }}
-					className="text-lg lg:text-xl tracking-widest leading-[3rem] space-y-2"
+					className="text-lg lg:text-xl tracking-widest leading-[1.8rem] space-y-0 w-[16rem] md:w-[23rem]"
 				>
-					<h3 className="text-xl font-semibold text-left">
+					<h3 className="text-xl font-semibold text-left ">
 						Projet {projectNum}
 					</h3>
-					<p className="text-left" title={description}>
-						{description.slice(0, 20)} ...
+					<p className="text-left text-lg" title={description}>
+						{description}.
 					</p>
 					<p className="text-left">Stack: {stack}</p>
 				</motion.div>

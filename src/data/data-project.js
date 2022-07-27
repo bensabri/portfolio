@@ -9,7 +9,8 @@ import photo7 from '../assets/medinah-1.png';
 export const projectList = [
 	{
 		title: ['c', 'i', 't', 'y', ' ', 'b', 'i', 'k', 'e'],
-		description: 'Site web de location de vélo',
+		description:
+			"Conception d'un site web interactif de location de vélos via une carte des stations libre",
 		stack: 'vanila javascript',
 		projectNum: 1,
 		image: photo1,
@@ -17,7 +18,7 @@ export const projectList = [
 	},
 	{
 		title: ['i', 'm', 'm', 'o', 'b', 'i', 'l', 'i', 'e', 'r'],
-		description: 'Site web immobillier',
+		description: "Conception d'un site web pour une agence immobilière",
 		stack: 'wordpress',
 		projectNum: 2,
 		image: photo2,
@@ -25,7 +26,8 @@ export const projectList = [
 	},
 	{
 		title: ['m', 'é', 't', 'e', 'o', '-', 'l', 'i', 'v', 'e'],
-		description: 'Application web méteo avec video live',
+		description:
+			"Conception d'une PWA météo avec pour fond d'écran la vidéo en direct de la ville sélectionné, seul quelque ville sont disponibles",
 		stack: 'react',
 		projectNum: 3,
 		image: photo3,
@@ -34,7 +36,7 @@ export const projectList = [
 	{
 		title: ['i', 'n', 'f', 'm', '-', 'l', 'i', 'v', 'e'],
 		description:
-			'Espace membre externe pour le site infm.fr qui donne accès à des vidéos de formations premium',
+			"Conception d'un espace membre externe pour le site infm.fr qui donne accès à des vidéos de formations premium",
 		stack: 'react, firebase',
 		projectNum: 4,
 		image: photo4,
@@ -42,7 +44,8 @@ export const projectList = [
 	},
 	{
 		title: ['v', 'o', 't', 'e', '-', 'u', 'n', 's', 'a'],
-		description: 'Application web de vote',
+		description:
+			"Conception d'une application web de vote pour le syndicat UNSA",
 		stack: 'react, firebase',
 		projectNum: 5,
 		image: photo5,
@@ -50,7 +53,8 @@ export const projectList = [
 	},
 	{
 		title: ['c', 'r', 'e', 'p', 'e', 's'],
-		description: 'Application web pour commande des crêpes',
+		description:
+			"Conception d'une application web pour commande des crêpes et payer en ligne",
 		stack: 'nextJs, strapi, graphQl',
 		projectNum: 6,
 		image: photo6,
@@ -59,7 +63,7 @@ export const projectList = [
 	{
 		title: ['m', 'a', 'r', 'k', 'e', 't', ' ', 'p', 'l', 'a', 'c', 'e'],
 		description:
-			'Ecommerce store les vendeurs proposent leurs produits en vente',
+			"Conception d'un site web ecommerce où les vendeurs s'inscrivent et proposent leurs produits à la vente",
 		stack: 'nextJs, strapi, graphQl',
 		projectNum: 7,
 		image: photo7,
