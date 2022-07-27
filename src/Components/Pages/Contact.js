@@ -79,14 +79,20 @@ const Contact = () => {
 					transition={{ delay: 0.3, duration: 0.5 }}
 					className="space-y-3 text-xl lg:text-2xl tracking-widest leading-[3rem] break-words"
 				>
-					<div className="flex items-center space-x-3">
+					<a
+						href="mailto:contact@sabri.dev"
+						className="flex items-center space-x-3 cursor-pointer"
+					>
 						<AiOutlineMail />
 						<p>contact@sabri.dev</p>
-					</div>
-					<div className="flex items-center space-x-3">
+					</a>
+					<a
+						href="tel:+33651183041"
+						className="flex items-center space-x-3 cursor-pointer"
+					>
 						<AiOutlinePhone />
 						<p>0651183041</p>
-					</div>
+					</a>
 				</motion.div>
 
 				{sent ? (
@@ -104,7 +110,7 @@ const Contact = () => {
 						fullScreen={isMobile}
 					>
 						<h2 className="text-center text-white text-4xl">
-							Contactez moi
+							Me contacter
 						</h2>
 						<div className="mx-10 mt-16">
 							<form onSubmit={handleSubmit(onSubmit)}>
@@ -114,44 +120,29 @@ const Contact = () => {
 										className="mb-1 text-xs sm:text-sm tracking-wide text-gray-100"
 									>
 										Nom
-										<span className="text-red-500"> *</span>
+										{/* <span className="text-red-500"> *</span> */}
 									</label>
 									<input
-										className={`${
-											errors.name
-												? 'focus:ring-red-500 border-red-500'
-												: 'focus:border-green-400 focus:ring-green-500'
-										} py-1 text-black text-lg font-normal rounded pl-2 border-2 focus:outline-none `}
+										className="py-1 text-black text-lg font-normal rounded pl-2 border-2 focus:outline-none focus:border-green-400 focus:ring-green-500"
 										id="name"
 										type="name"
 										placeholder="Votre nom"
-										{...register('name', {
-											required:
-												'Vous devez renseigner ce champs',
-										})}
+										{...register('name')}
 									/>
-									{errors.name && (
-										<p className="text-xs text-red-500">
-											Vous devez renseigner ce champs
-										</p>
-									)}
 								</div>
 								<div className="flex flex-col mb-6">
 									<label
 										htmlFor="email"
 										className="mb-1 text-xs sm:text-sm tracking-wide text-gray-100"
 									>
-										E-Mail
+										E-mail
 									</label>
 									<input
 										className="py-1 text-black text-lg font-normal rounded pl-2 border-2 focus:outline-none focus:border-green-400 focus:ring-green-500"
 										id="email"
 										type="email"
-										placeholder="Votre email"
-										{...register('email', {
-											required:
-												'Vous devez renseigner ce champs',
-										})}
+										placeholder="ex: email@exemple.com"
+										{...register('email')}
 									/>
 								</div>
 								<div className="flex flex-col mb-5">
@@ -160,33 +151,21 @@ const Contact = () => {
 										className="mb-1 text-xs sm:text-sm tracking-wide text-gray-100"
 									>
 										Message
-										<span className="text-red-500"> *</span>
+										{/* <span className="text-red-500"> *</span> */}
 									</label>
 									<textarea
 										name="message"
 										id="message"
 										placeholder="Votre message"
-										{...register('message', {
-											required:
-												'Vous devez renseigner ce champs',
-										})}
+										{...register('message')}
 										cols="10"
 										rows="2"
-										className={`${
-											errors.name
-												? 'focus:ring-red-500 border-red-500'
-												: 'focus:border-green-400 focus:ring-green-500'
-										} py-1 text-black text-lg font-normal rounded pl-2 border-2 focus:outline-none `}
+										className="py-1 text-black text-lg font-normal rounded pl-2 border-2 focus:outline-none focus:border-green-400 focus:ring-green-500"
 									/>
-									{errors.message && (
-										<p className="text-xs text-red-500">
-											Vous devez renseigner ce champs
-										</p>
-									)}
 								</div>
 								<div className="w-full flex justify-center ">
 									<button className="hover:-translate-y-1 transition-all text-white bg-[#FF4D5A] tracking-widest font-semibold rounded-full py-2 px-5 text-base">
-										Envoie
+										Envoyer
 									</button>
 								</div>
 							</form>
@@ -197,7 +176,7 @@ const Contact = () => {
 					onClick={() => setOpened(true)}
 					className="hover:-translate-y-1 transition-all  bg-[#FF4D5A] tracking-widest font-semibold rounded-full py-2 px-5 text-base"
 				>
-					Contact
+					Me contacter
 				</button>
 			</div>
 		</motion.div>

@@ -64,7 +64,7 @@ const Projet = ({ title, description, projectNum, image, url, stack }) => {
 							transition={{ delay: 0.4, duration: 0.5 }}
 							className="bg-[#FF4D5A] tracking-widest font-semibold rounded-full py-2 px-5 "
 						>
-							Voir
+							Visiter
 						</motion.button>
 					</a>
 				</div>
