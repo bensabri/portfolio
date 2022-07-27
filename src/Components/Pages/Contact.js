@@ -12,7 +12,11 @@ const Contact = () => {
 	const [opened, setOpened] = useState(false);
 
 	const navigate = useNavigate();
-	const { handleSubmit, formState, register, reset } = useForm();
+	const { handleSubmit, formState, register, reset } = useForm({
+		mode: 'onTouched',
+	});
+
+	const { isSubmitting, errors } = formState;
 
 	const isMobile = useMediaQuery('(max-width: 600px)');
 
@@ -90,7 +94,10 @@ const Contact = () => {
 				) : (
 					<Modal
 						opened={opened}
-						onClose={() => setOpened(false)}
+						onClose={() => {
+							setOpened(false);
+							reset();
+						}}
 						classNames={{
 							modal: 'bg-[#040E1A] rounded-xl',
 						}}
@@ -107,9 +114,14 @@ const Contact = () => {
 										className="mb-1 text-xs sm:text-sm tracking-wide text-gray-100"
 									>
 										Nom
+										<span className="text-red-500"> *</span>
 									</label>
 									<input
-										className="py-1 text-black text-lg font-normal rounded pl-2"
+										className={`${
+											errors.name
+												? 'focus:ring-red-500 border-red-500'
+												: 'focus:border-green-400 focus:ring-green-500'
+										} py-1 text-black text-lg font-normal rounded pl-2 border-2 focus:outline-none `}
 										id="name"
 										type="name"
 										placeholder="Votre nom"
@@ -118,6 +130,11 @@ const Contact = () => {
 												'Vous devez renseigner ce champs',
 										})}
 									/>
+									{errors.name && (
+										<p className="text-xs text-red-500">
+											Vous devez renseigner ce champs
+										</p>
+									)}
 								</div>
 								<div className="flex flex-col mb-6">
 									<label
@@ -127,7 +144,7 @@ const Contact = () => {
 										E-Mail
 									</label>
 									<input
-										className="py-1 text-black text-lg font-normal rounded pl-2"
+										className="py-1 text-black text-lg font-normal rounded pl-2 border-2 focus:outline-none focus:border-green-400 focus:ring-green-500"
 										id="email"
 										type="email"
 										placeholder="Votre email"
@@ -143,6 +160,7 @@ const Contact = () => {
 										className="mb-1 text-xs sm:text-sm tracking-wide text-gray-100"
 									>
 										Message
+										<span className="text-red-500"> *</span>
 									</label>
 									<textarea
 										name="message"
@@ -154,8 +172,17 @@ const Contact = () => {
 										})}
 										cols="10"
 										rows="2"
-										className="py-1 text-black text-lg font-normal rounded pl-2"
-									></textarea>
+										className={`${
+											errors.name
+												? 'focus:ring-red-500 border-red-500'
+												: 'focus:border-green-400 focus:ring-green-500'
+										} py-1 text-black text-lg font-normal rounded pl-2 border-2 focus:outline-none `}
+									/>
+									{errors.message && (
+										<p className="text-xs text-red-500">
+											Vous devez renseigner ce champs
+										</p>
+									)}
 								</div>
 								<div className="w-full flex justify-center ">
 									<button className="hover:-translate-y-1 transition-all text-white bg-[#FF4D5A] tracking-widest font-semibold rounded-full py-2 px-5 text-base">
