@@ -57,7 +57,7 @@ const Projet = ({ title, description, projectNum, image, url, stack }) => {
 					<p className="text-left">Stack: {stack}</p>
 				</motion.div>
 				<div className="hover:-translate-y-1 transition-all">
-					<a href={url} target="_blank">
+					<a href={url} target="_blank" rel="noreferrer">
 						<motion.button
 							initial={{ opacity: 0, x: -100 }}
 							whileInView={{ opacity: 1, x: 0 }}

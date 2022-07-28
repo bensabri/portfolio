@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import galaxy from '../../assets/Galaxy 2.png';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { lastName, firstName } from '../../data/data-names';
 
 const Home = () => {

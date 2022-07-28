@@ -1,15 +1,13 @@
 import { projectList } from '../../data/data-project';
 import Projet from '../Works/Projet';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-
 import { RiArrowRightSLine, RiArrowLeftSLine } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 
 const Works = () => {
 	const navigate = useNavigate();
-	const location = useLocation();
 
 	const arrowStyles = {
 		position: 'absolute',

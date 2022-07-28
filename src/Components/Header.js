@@ -18,12 +18,17 @@ const Header = () => {
 						href={cvSabri}
 						className="font-bold hover:opacity-50 transition-opacity cursor-pointer"
 						target="_blank"
+						rel="noreferrer"
 						title="Télécharger mon cv"
 						download
 					>
 						CV
 					</a>
-					<a href="https://github.com/bensabri" target="_blank">
+					<a
+						href="https://github.com/bensabri"
+						target="_blank"
+						rel="noreferrer"
+					>
 						<AiFillGithub className="hover:opacity-50 transition-opacity cursor-pointer text-3xl" />
 					</a>
 					<Hamburger toggled={isOpen} toggle={setOpen} size={43} />

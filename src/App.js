@@ -2,7 +2,6 @@ import './App.css';
 import './styles.scss';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './Components/Header';
-import Sidebar from './Components/Sidebar';
 import { motion } from 'framer-motion';
 import AnimatedRoute from './Components/AnimatedRoute';
 
