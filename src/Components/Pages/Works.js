@@ -1,4 +1,3 @@
-import { projectList } from '../../data/data-project';
 import Projet from '../Works/Projet';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
@@ -6,7 +5,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { RiArrowRightSLine, RiArrowLeftSLine } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 
-const Works = () => {
+const Works = ({ worksL }) => {
 	const navigate = useNavigate();
 
 	const arrowStyles = {
@@ -57,7 +56,7 @@ const Works = () => {
 						)
 					}
 				>
-					{projectList?.map(
+					{worksL?.map(
 						(
 							{
 								title,
@@ -66,6 +65,7 @@ const Works = () => {
 								image,
 								url,
 								stack,
+								btn,
 							},
 							i
 						) => (
@@ -78,6 +78,7 @@ const Works = () => {
 								projectNum={projectNum}
 								image={image}
 								url={url}
+								btn={btn}
 							/>
 						)
 					)}

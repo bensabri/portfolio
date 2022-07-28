@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 
-const Projet = ({ title, description, projectNum, image, url, stack }) => {
+const Projet = ({ title, description, projectNum, image, url, stack, btn }) => {
 	const location = useLocation();
 
 	return (
@@ -64,7 +64,7 @@ const Projet = ({ title, description, projectNum, image, url, stack }) => {
 							transition={{ delay: 0.4, duration: 0.5 }}
 							className="bg-[#FF4D5A] tracking-widest font-semibold rounded-full py-2 px-5 "
 						>
-							Visiter
+							{btn}
 						</motion.button>
 					</a>
 				</div>

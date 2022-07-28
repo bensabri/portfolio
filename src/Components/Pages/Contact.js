@@ -1,13 +1,12 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
-import { contact } from '../../data/data-names';
 import { useState, useRef } from 'react';
 import { Modal } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import emailjs from '@emailjs/browser';
 
-const Contact = () => {
+const Contact = ({ contactL }) => {
 	const [sent, setSent] = useState(false);
 	const [opened, setOpened] = useState(false);
 	const form = useRef();
@@ -51,7 +50,7 @@ const Contact = () => {
 		>
 			<div className="absolute top-[8rem] pb-20 px-5 space-y-8 z-10 font-medium text-5xl md:text-6xl lg:text-7xl leading-[6.5rem] tracking-wider">
 				<div className="flex justify-center uppercase">
-					{contact.map((item, i) => (
+					{contactL.contact.map((item, i) => (
 						<motion.h2
 							key={i}
 							initial={{ opacity: 0, x: -100 }}
@@ -119,7 +118,7 @@ const Contact = () => {
 						fullScreen={isMobile}
 					>
 						<h2 className="text-center text-white text-4xl">
-							Me contacter
+							{contactL.btnContactMe}
 						</h2>
 						<div className="mx-10 mt-16">
 							<form ref={form} onSubmit={sendEmail}>
@@ -128,14 +127,14 @@ const Contact = () => {
 										htmlFor="user_name"
 										className="mb-1 text-xs sm:text-sm tracking-wide text-gray-100"
 									>
-										Nom
+										{contactL.name}
 									</label>
 									<input
 										className="py-1 text-black text-lg font-normal rounded pl-2 border-2 focus:outline-none focus:border-green-400 focus:ring-green-500"
 										id="user_name"
 										name="user_name"
 										type="name"
-										placeholder="Votre nom"
+										placeholder={contactL.placeholderName}
 										required
 									/>
 								</div>
@@ -165,7 +164,9 @@ const Contact = () => {
 									<textarea
 										name="message"
 										id="message"
-										placeholder="Votre message"
+										placeholder={
+											contactL.placeholderMessage
+										}
 										cols="10"
 										rows="2"
 										required
@@ -175,7 +176,7 @@ const Contact = () => {
 								<div className="w-full flex justify-center ">
 									<input
 										type="submit"
-										value="Envoyer"
+										value={contactL.btnSend}
 										className="hover:-translate-y-1 transition-all text-white bg-[#FF4D5A] tracking-widest font-semibold rounded-full py-2 px-5 text-base"
 									/>
 								</div>
@@ -191,7 +192,7 @@ const Contact = () => {
 						onClick={() => setOpened(true)}
 						className="hover:-translate-y-1 transition-all  bg-[#FF4D5A] tracking-widest font-semibold rounded-full py-2 px-5 text-base"
 					>
-						Me contacter
+						{contactL.btnContactMe}
 					</motion.button>
 				)}
 			</div>

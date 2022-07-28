@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const Navbar = ({ setOpen, isOpen }) => {
+const Navbar = ({ setOpen, isOpen, navLang }) => {
 	const ulList = {
 		visible: { opacity: 1 },
 	};
@@ -34,7 +34,7 @@ const Navbar = ({ setOpen, isOpen }) => {
 						transition={{ delay: 0.6 }}
 						className="link link-underline link-underline-white text-white uppercase text-7xl md:text-8xl lg:text-9xl cursor-pointer"
 					>
-						accueil
+						{navLang.home}
 					</motion.span>
 				</Link>
 				{/* </motion.div> */}
@@ -45,7 +45,7 @@ const Navbar = ({ setOpen, isOpen }) => {
 						transition={{ delay: 0.6 }}
 						className="link link-underline link-underline-white text-white uppercase text-7xl md:text-8xl lg:text-9xl cursor-pointer"
 					>
-						projets
+						{navLang.works}
 					</motion.span>
 				</Link>
 				<Link to="/aboutme">
@@ -55,7 +55,7 @@ const Navbar = ({ setOpen, isOpen }) => {
 						transition={{ delay: 0.6 }}
 						className="link link-underline link-underline-white text-white uppercase text-7xl md:text-8xl lg:text-9xl cursor-pointer"
 					>
-						profil
+						{navLang.aboutMe}
 					</motion.span>
 				</Link>
 				<Link to="/contact">
@@ -65,7 +65,7 @@ const Navbar = ({ setOpen, isOpen }) => {
 						transition={{ delay: 0.6 }}
 						className="link link-underline link-underline-white text-white uppercase text-7xl md:text-8xl lg:text-9xl cursor-pointer"
 					>
-						contact
+						{navLang.contact}
 					</motion.span>
 				</Link>
 			</motion.div>

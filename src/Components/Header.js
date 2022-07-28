@@ -4,7 +4,7 @@ import { AiFillGithub } from 'react-icons/ai';
 import NavList from './NavList';
 import cvSabri from '../assets/CV-SABRI.pdf';
 
-const Header = () => {
+const Header = ({ navLang }) => {
 	const [isOpen, setOpen] = useState(false);
 
 	return (
@@ -34,7 +34,7 @@ const Header = () => {
 					<Hamburger toggled={isOpen} toggle={setOpen} size={43} />
 				</div>
 			</div>
-			<NavList isOpen={isOpen} setOpen={setOpen} />
+			<NavList isOpen={isOpen} setOpen={setOpen} navLang={navLang} />
 		</header>
 	);
 };

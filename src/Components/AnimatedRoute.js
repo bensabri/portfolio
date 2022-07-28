@@ -6,8 +6,10 @@ import AboutMe from './Pages/AboutMe';
 import { AnimatePresence } from 'framer-motion';
 import { useSwipeable } from 'react-swipeable';
 import Sidebar from './Sidebar';
+import { navBarLang } from '../data/data-languages';
+import { useEffect, useState } from 'react';
 
-const AnimatedRoute = () => {
+const AnimatedRoute = ({ navLang, contactL, aboutL, worksL }) => {
 	const location = useLocation();
 	const navigate = useNavigate();
 
@@ -39,12 +41,18 @@ const AnimatedRoute = () => {
 			<AnimatePresence>
 				<Routes location={location} key={location.pathname}>
 					<Route path="/" element={<Home />} />
-					<Route path="/works" element={<Works />} />
-					<Route path="/contact" element={<Contact />} />
-					<Route path="/aboutme" element={<AboutMe />} />
+					<Route path="/works" element={<Works worksL={worksL} />} />
+					<Route
+						path="/contact"
+						element={<Contact contactL={contactL} />}
+					/>
+					<Route
+						path="/aboutme"
+						element={<AboutMe aboutL={aboutL} />}
+					/>
 				</Routes>
 			</AnimatePresence>
-			<Sidebar />
+			<Sidebar navLang={navLang} />
 		</div>
 	);
 };

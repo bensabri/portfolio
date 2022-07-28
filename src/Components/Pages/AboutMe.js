@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { aboutMe } from '../../data/data-names';
 
-const AboutMe = () => {
+const AboutMe = ({ aboutL }) => {
 	const location = useLocation();
 	const navigate = useNavigate();
 
@@ -20,7 +20,7 @@ const AboutMe = () => {
 		>
 			<div className="absolute top-[8rem] space-y-8 z-10 font-medium text-5xl md:text-7xl lg:text-8xl leading-[6.5rem] tracking-wider">
 				<div className="flex ml-3 uppercase">
-					{aboutMe.map((item, i) => (
+					{aboutL.title.map((item, i) => (
 						<motion.h2
 							key={i}
 							initial={{ opacity: 0, x: -100 }}

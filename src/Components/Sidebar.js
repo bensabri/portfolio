@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
 
-const Sidebar = () => {
+const Sidebar = ({ navLang }) => {
 	return (
 		<motion.div
 			initial={{ x: '-100vw' }}
@@ -18,7 +18,7 @@ const Sidebar = () => {
 						} transition-all delay-350`
 					}
 				>
-					<li>Accueil</li>
+					<li>{navLang.home}</li>
 				</NavLink>
 				<NavLink
 					to="/works"
@@ -28,7 +28,7 @@ const Sidebar = () => {
 						} transition-all delay-350`
 					}
 				>
-					<li>Projets</li>
+					<li>{navLang.works}</li>
 				</NavLink>
 				<NavLink
 					to="/aboutme"
@@ -38,7 +38,7 @@ const Sidebar = () => {
 						} transition-all delay-350`
 					}
 				>
-					<li>Profil</li>
+					<li>{navLang.aboutMe}</li>
 				</NavLink>
 				<NavLink
 					to="/contact"
@@ -48,7 +48,7 @@ const Sidebar = () => {
 						} transition-all delay-350`
 					}
 				>
-					<li>Contact</li>
+					<li>{navLang.contact}</li>
 				</NavLink>
 			</ul>
 		</motion.div>
