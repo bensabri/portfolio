@@ -17,10 +17,10 @@ function App() {
 	let userLang = navigator.language || navigator.userLanguage;
 
 	useEffect(() => {
-		if (userLang.slice(0, 2) === 'en') {
-			setIsEnglish(true);
-		} else {
+		if (userLang.slice(0, 2) === 'fr') {
 			setIsEnglish(false);
+		} else {
+			setIsEnglish(true);
 		}
 	}, []);
 
