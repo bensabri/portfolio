@@ -34,9 +34,12 @@ const Home = () => {
 				initial={{ opacity: 0, y: '100vh' }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ delay: 0.8, duration: 1 }}
-				className="absolute top-[4rem] md:top-[16.4rem] -left-[4.9rem] cursor-pointer z-20"
+				className="absolute -left-[4.9rem] cursor-pointer z-20"
 			>
-				<a className="link" onClick={() => navigate('/works')}>
+				<a
+					className="link mb-[20rem] md:mb-[12rem]"
+					onClick={() => navigate('/works')}
+				>
 					<span className="link__arrow">
 						<span></span>
 						<span></span>
