@@ -106,7 +106,8 @@ export const projectListLang = [
 			},
 			{
 				title: ['i', 'n', 'f', 'm', '-', 'l', 'i', 'v', 'e'],
-				description: '',
+				description:
+					'External member area for the infm.fr site which gives access to premium training videos',
 				stack: 'react, firebase',
 				projectNum: 4,
 				image: photo4,
@@ -115,7 +116,8 @@ export const projectListLang = [
 			},
 			{
 				title: ['v', 'o', 't', 'e', '-', 'a', 'p', 'p'],
-				description: 'No translated yet',
+				description:
+					'Create a voting web app for UNSA syndicat based in france',
 				stack: 'react, firebase',
 				projectNum: 5,
 				image: photo5,
@@ -124,7 +126,8 @@ export const projectListLang = [
 			},
 			{
 				title: ['c', 'r', 'e', 'p', 'e', 's'],
-				description: 'No translated yet',
+				description:
+					'Create an ordering web app to choose your crepes in the restaurant customise the ingredients and pay it online.',
 				stack: 'nextJs, strapi, graphQl',
 				projectNum: 6,
 				image: photo6,
@@ -146,7 +149,8 @@ export const projectListLang = [
 					'c',
 					'e',
 				],
-				description: 'No translated yet',
+				description:
+					'An e-commerce market place where sellers can add their product in the database via the admin panel, then the administrator of the e-commerce decides whether to publish the product or not.',
 				stack: 'nextJs, strapi, graphQl',
 				projectNum: 7,
 				image: photo7,
