@@ -1,12 +1,11 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { Modal } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import emailjs from '@emailjs/browser';
 import { FC } from 'react';
-import { IcontactL } from '../../model';
 
 interface Props {
 	contactL: {
@@ -24,21 +23,20 @@ interface Props {
 const Contact: FC<Props> = ({ contactL }) => {
 	const [sent, setSent] = useState(false);
 	const [opened, setOpened] = useState(false);
-	const form = useRef();
 
 	const navigate = useNavigate();
 
 	const isMobile = useMediaQuery('(max-width: 600px)');
 
-	const sendEmail = (e: React.SyntheticEvent) => {
+	const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
 		emailjs
 			.sendForm(
-				process.env.REACT_APP_SERVICE_ID,
-				process.env.REACT_APP_TEMPLATE_ID,
-				form.current,
-				process.env.REACT_APP_PUBLIC_KEY
+				process.env.REACT_APP_SERVICE_ID as string,
+				process.env.REACT_APP_TEMPLATE_ID as string,
+				e.currentTarget,
+				process.env.REACT_APP_PUBLIC_KEY as string
 			)
 			.then(
 				(result) => {
@@ -50,6 +48,7 @@ const Contact: FC<Props> = ({ contactL }) => {
 					console.log(error.text);
 				}
 			);
+		e.currentTarget.reset();
 	};
 
 	return (
@@ -136,7 +135,7 @@ const Contact: FC<Props> = ({ contactL }) => {
 							{contactL.btnContactMe}
 						</h2>
 						<div className="mx-10 mt-16">
-							<form ref={form} onSubmit={sendEmail}>
+							<form onSubmit={sendEmail}>
 								<div className="flex flex-col mb-5">
 									<label
 										htmlFor="user_name"
@@ -182,8 +181,8 @@ const Contact: FC<Props> = ({ contactL }) => {
 										placeholder={
 											contactL.placeholderMessage
 										}
-										cols="10"
-										rows="2"
+										// cols="10"
+										// rows="2"
 										required
 										className="py-1 text-black text-lg font-normal rounded pl-2 border-2 focus:outline-none focus:border-green-400 focus:ring-green-500"
 									/>

@@ -1,11 +1,3 @@
-// declare namespace NodeJS {
-// 	interface ProcessEnv {
-// 		//types of envs
-// 		SERVICE_ID: string;
-// 		TEMPLATE_ID: string;
-// 		PUBLIC_KEY: string;
-// 	}
-// }
 export {};
 
 declare global {
