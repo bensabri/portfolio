@@ -1,20 +1,22 @@
 import './App.css';
 import './styles.scss';
-import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './Components/Header';
 import { motion } from 'framer-motion';
 import AnimatedRoute from './Components/AnimatedRoute';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, FC } from 'react';
 import {
-	navBarLang,
-	contactLang,
 	aboutMeLang,
+	contactLang,
+	navBarLang,
 	projectListLang,
 } from './data/data-languages';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { InavLanguage } from './model';
 
-function App() {
-	const [isEnglish, setIsEnglish] = useState(false);
-	let userLang = navigator.language || navigator.userLanguage;
+const App: FC = () => {
+	const [isEnglish, setIsEnglish] = useState<boolean>(false);
+	let userLang: string | readonly string[] =
+		navigator.language || navigator.languages;
 
 	useEffect(() => {
 		if (userLang.slice(0, 2) === 'fr') {
@@ -30,7 +32,7 @@ function App() {
 	const { worksEng, worksFr } = projectListLang[0];
 
 	return (
-		<div className="bg-black h-screen" style={{}}>
+		<div className="bg-black h-screen">
 			<Router>
 				<motion.div
 					initial={{ y: '-100%' }}
@@ -53,6 +55,6 @@ function App() {
 			</Router>
 		</div>
 	);
-}
+};
 
 export default App;

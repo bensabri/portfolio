@@ -1,15 +1,29 @@
 import Projet from '../Works/Projet';
+import { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { RiArrowRightSLine, RiArrowLeftSLine } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 
-const Works = ({ worksL }) => {
+interface Props {
+	worksL: {
+		title: string[];
+		description: string;
+		stack: string;
+		projectNum: number;
+		image: string;
+		url: string;
+		btn: string;
+	}[];
+}
+
+const Works: FC<Props> = ({ worksL }) => {
 	const navigate = useNavigate();
 
 	const arrowStyles = {
-		position: 'absolute',
+		// Needs testing
+		// position: 'absolute',
 		zIndex: 2,
 		top: 'calc(50% - 15px)',
 		width: 50,
@@ -38,18 +52,26 @@ const Works = ({ worksL }) => {
 					transitionTime={1000}
 					centerMode={false}
 					swipeable={true}
-					renderArrowPrev={(onClickHandler, hasPrev, label) =>
+					renderArrowPrev={(onClickHandler, hasPrev) =>
 						hasPrev && (
 							<RiArrowLeftSLine
-								style={{ ...arrowStyles, left: 15 }}
+								style={{
+									...arrowStyles,
+									left: 15,
+									position: 'absolute',
+								}}
 								onClick={onClickHandler}
 							/>
 						)
 					}
-					renderArrowNext={(onClickHandler, hasNext, label) =>
+					renderArrowNext={(onClickHandler, hasNext) =>
 						hasNext && (
 							<RiArrowRightSLine
-								style={{ ...arrowStyles, right: 15 }}
+								style={{
+									...arrowStyles,
+									right: 15,
+									position: 'absolute',
+								}}
 								onClick={onClickHandler}
 								// className="hover:bg-gray-400 hover:opacity-20 rounded-full"
 							/>
@@ -71,7 +93,6 @@ const Works = ({ worksL }) => {
 						) => (
 							<Projet
 								key={i}
-								i={i}
 								title={title}
 								description={description}
 								stack={stack}

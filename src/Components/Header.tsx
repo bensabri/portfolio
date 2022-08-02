@@ -2,10 +2,20 @@ import { Slant as Hamburger } from 'hamburger-react';
 import { useState } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import NavList from './NavList';
+import { FC } from 'react';
 import cvSabri from '../assets/CV-SABRI.pdf';
 
-const Header = ({ navLang }) => {
-	const [isOpen, setOpen] = useState(false);
+interface Props {
+	navLang: {
+		home: string;
+		works: string;
+		aboutMe: string;
+		contact: string;
+	};
+}
+
+const Header: FC<Props> = ({ navLang }) => {
+	const [isOpen, setOpen] = useState<boolean>(false);
 
 	return (
 		<header>

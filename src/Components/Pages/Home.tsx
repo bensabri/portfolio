@@ -1,22 +1,31 @@
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import galaxy from '../../assets/Galaxy 2.png';
 import { useNavigate } from 'react-router-dom';
 import { lastName, firstName } from '../../data/data-names';
 
-const Home = () => {
-	const [mousePosition, setMousePosition] = useState({ x: null, y: null });
+interface MousePosition {
+	x: number;
+	y: number;
+}
+
+const Home: FC = () => {
+	const [mousePosition, setMousePosition] = useState<MousePosition>({
+		x: 0,
+		y: 0,
+	});
 
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		const updateMousePosition = (ev) => {
-			setMousePosition({ x: ev.clientX, y: ev.clientY });
+		const onMouseMove = (e: MouseEvent) => {
+			setMousePosition({ x: e.clientX, y: e.clientY });
 		};
-		window.addEventListener('mousemove', updateMousePosition);
+
+		window.addEventListener('mousemove', onMouseMove);
 
 		return () => {
-			window.removeEventListener('mousemove', updateMousePosition);
+			window.removeEventListener('mousemove', onMouseMove);
 		};
 	}, []);
 

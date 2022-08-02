@@ -5,8 +5,23 @@ import { useState, useRef } from 'react';
 import { Modal } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import emailjs from '@emailjs/browser';
+import { FC } from 'react';
+import { IcontactL } from '../../model';
 
-const Contact = ({ contactL }) => {
+interface Props {
+	contactL: {
+		contact: string[];
+		btnContactMe: string;
+		name: string;
+		placeholderName: string;
+		email: string;
+		message: string;
+		placeholderMessage: string;
+		btnSend: string;
+	};
+}
+
+const Contact: FC<Props> = ({ contactL }) => {
 	const [sent, setSent] = useState(false);
 	const [opened, setOpened] = useState(false);
 	const form = useRef();
@@ -15,7 +30,7 @@ const Contact = ({ contactL }) => {
 
 	const isMobile = useMediaQuery('(max-width: 600px)');
 
-	const sendEmail = (e) => {
+	const sendEmail = (e: React.SyntheticEvent) => {
 		e.preventDefault();
 
 		emailjs

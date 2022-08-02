@@ -1,7 +1,26 @@
 import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
+import { FC } from 'react';
 
-const Projet = ({ title, description, projectNum, image, url, stack, btn }) => {
+interface Props {
+	title: string[];
+	description: string;
+	projectNum: number;
+	image: string;
+	url: string;
+	stack: string;
+	btn: string;
+}
+
+const Projet: FC<Props> = ({
+	title,
+	description,
+	projectNum,
+	image,
+	url,
+	stack,
+	btn,
+}) => {
 	const location = useLocation();
 
 	return (

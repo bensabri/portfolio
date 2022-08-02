@@ -7,9 +7,45 @@ import { AnimatePresence } from 'framer-motion';
 import { useSwipeable } from 'react-swipeable';
 import Sidebar from './Sidebar';
 import { navBarLang } from '../data/data-languages';
-import { useEffect, useState } from 'react';
+import { FC } from 'react';
 
-const AnimatedRoute = ({ navLang, contactL, aboutL, worksL }) => {
+interface Props {
+	navLang: {
+		home: string;
+		works: string;
+		aboutMe: string;
+		contact: string;
+	};
+	contactL: {
+		contact: string[];
+		btnContactMe: string;
+		name: string;
+		placeholderName: string;
+		email: string;
+		message: string;
+		placeholderMessage: string;
+		btnSend: string;
+	};
+	aboutL: {
+		title: string[];
+	};
+	worksL: {
+		title: string[];
+		description: string;
+		stack: string;
+		projectNum: number;
+		image: string;
+		url: string;
+		btn: string;
+	}[];
+}
+
+const AnimatedRoute: FC<Props> = ({
+	navLang,
+	contactL,
+	aboutL,
+	worksL,
+}: Props) => {
 	const location = useLocation();
 	const navigate = useNavigate();
 
@@ -32,7 +68,7 @@ const AnimatedRoute = ({ navLang, contactL, aboutL, worksL }) => {
 				navigate('/');
 			}
 		},
-		preventDefaultTouchmoveEvent: true,
+		// preventDefaultTouchmoveEvent: true,
 		trackMouse: true,
 	});
 
