@@ -1,8 +1,14 @@
 import { motion } from 'framer-motion';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { aboutMe } from '../../data/data-names';
+import { FC } from 'react';
 
-const AboutMe = ({ aboutL }) => {
+interface Props {
+	aboutL: {
+		title: string[];
+	};
+}
+
+const AboutMe: FC<Props> = ({ aboutL }) => {
 	const location = useLocation();
 	const navigate = useNavigate();
 

@@ -1,7 +1,17 @@
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
+import { FC } from 'react';
 
-const Sidebar = ({ navLang }) => {
+interface Props {
+	navLang: {
+		home: string;
+		works: string;
+		aboutMe: string;
+		contact: string;
+	};
+}
+
+const Sidebar: FC<Props> = ({ navLang }) => {
 	return (
 		<motion.div
 			initial={{ x: '-100vw' }}

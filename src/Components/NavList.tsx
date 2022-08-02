@@ -1,7 +1,19 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { FC } from 'react';
 
-const Navbar = ({ setOpen, isOpen, navLang }) => {
+interface Props {
+	isOpen: boolean;
+	setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+	navLang: {
+		home: string;
+		works: string;
+		aboutMe: string;
+		contact: string;
+	};
+}
+
+const Navbar: FC<Props> = ({ setOpen, isOpen, navLang }) => {
 	const ulList = {
 		visible: { opacity: 1 },
 	};
