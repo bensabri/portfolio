@@ -43,12 +43,9 @@ const Home: FC = () => {
 				initial={{ opacity: 0, y: '100vh' }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ delay: 0.8, duration: 1 }}
-				className="absolute -left-[4.9rem] cursor-pointer z-20"
+				className="absolute -left-[4.9rem] cursor-pointer z-20 mb-[20rem] md:mb-[11rem]"
 			>
-				<a
-					className="link mb-[20rem] md:mb-[12rem]"
-					onClick={() => navigate('/works')}
-				>
+				<a className="link " onClick={() => navigate('/works')}>
 					<span className="link__arrow">
 						<span></span>
 						<span></span>

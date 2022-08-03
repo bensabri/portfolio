@@ -75,7 +75,7 @@ const Projet: FC<Props> = ({
 					</p>
 					<p className="text-left">Stack: {stack}</p>
 				</motion.div>
-				<div className="hover:-translate-y-1 transition-all">
+				<div className="hover:scale-105 active:scale-95 transition-all">
 					<a href={url} target="_blank" rel="noreferrer">
 						<motion.button
 							initial={{ opacity: 0, x: -100 }}

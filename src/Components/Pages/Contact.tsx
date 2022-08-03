@@ -181,34 +181,34 @@ const Contact: FC<Props> = ({ contactL }) => {
 										placeholder={
 											contactL.placeholderMessage
 										}
-										// cols="10"
-										// rows="2"
 										required
 										className="py-1 text-black text-lg font-normal rounded pl-2 border-2 focus:outline-none focus:border-green-400 focus:ring-green-500"
 									/>
 								</div>
-								<div className="w-full flex justify-center ">
+								<div className="w-full flex justify-center hover:scale-105 active:scale-95 transition-all">
 									<input
 										type="submit"
 										value={contactL.btnSend}
-										className="hover:-translate-y-1 transition-all text-white bg-[#FF4D5A] tracking-widest font-semibold rounded-full py-2 px-5 text-base"
+										className=" text-white bg-[#FF4D5A] tracking-widest font-semibold rounded-full py-2 px-5 text-base"
 									/>
 								</div>
 							</form>
 						</div>
 					</Modal>
 				)}
-				{!sent && (
-					<motion.button
-						initial={{ opacity: 0, x: -100 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						transition={{ delay: 0.5, duration: 0.5 }}
-						onClick={() => setOpened(true)}
-						className="hover:-translate-y-1 transition-all  bg-[#FF4D5A] tracking-widest font-semibold rounded-full py-2 px-5 text-base"
-					>
-						{contactL.btnContactMe}
-					</motion.button>
-				)}
+				<div className="hover:scale-105 active:scale-95 transition-all">
+					{!sent && (
+						<motion.button
+							initial={{ opacity: 0, x: -100 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							transition={{ delay: 0.5, duration: 0.5 }}
+							onClick={() => setOpened(true)}
+							className="bg-[#FF4D5A] tracking-widest font-semibold rounded-full py-2 px-5 text-base"
+						>
+							{contactL.btnContactMe}
+						</motion.button>
+					)}
+				</div>
 			</div>
 		</motion.div>
 	);
