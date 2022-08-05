@@ -138,15 +138,15 @@ const Contact: FC<Props> = ({ contactL }) => {
 							<form onSubmit={sendEmail}>
 								<div className="flex flex-col mb-5">
 									<label
-										htmlFor="user_name"
+										htmlFor="name"
 										className="mb-1 text-xs sm:text-sm tracking-wide text-gray-100"
 									>
 										{contactL.name}
 									</label>
 									<input
 										className="py-1 text-black text-lg font-normal rounded pl-2 border-2 focus:outline-none focus:border-green-400 focus:ring-green-500"
-										id="user_name"
-										name="user_name"
+										id="name"
+										name="name"
 										type="name"
 										placeholder={contactL.placeholderName}
 										required
@@ -154,15 +154,15 @@ const Contact: FC<Props> = ({ contactL }) => {
 								</div>
 								<div className="flex flex-col mb-6">
 									<label
-										htmlFor="user_email"
+										htmlFor="email"
 										className="mb-1 text-xs sm:text-sm tracking-wide text-gray-100"
 									>
 										E-mail
 									</label>
 									<input
 										className="py-1 text-black text-lg font-normal rounded pl-2 border-2 focus:outline-none focus:border-green-400 focus:ring-green-500"
-										id="user_email"
-										name="user_email"
+										id="email"
+										name="email"
 										type="email"
 										placeholder="ex: email@exemple.com"
 										required

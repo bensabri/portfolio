@@ -11,7 +11,6 @@ import {
 	projectListLang,
 } from './data/data-languages';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { InavLanguage } from './model';
 
 const App: FC = () => {
 	const [isEnglish, setIsEnglish] = useState<boolean>(false);

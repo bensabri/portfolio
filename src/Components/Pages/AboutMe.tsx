@@ -59,13 +59,14 @@ const AboutMe: FC<Props> = ({ aboutL }) => {
 					initial={{ opacity: 0, x: -100 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ delay: 0.3, duration: 0.5 }}
-					className="text-lg lg:text-xl tracking-widest leading-[3rem] space-y-2"
+					className="text-sm lg:text-xl tracking-widest leading-[3rem] space-y-2"
 				>
 					<h2 className="text-2xl md:text-3xl">
 						FullStack developer
 					</h2>
-					<p>JavaScript, React, NextJs</p>
-					<p>NodeJs, GraphQl, RestApi</p>
+					<p>JavaScript, ReactJs, NextJs</p>
+					<p>NodeJs, GraphQl, RestApi, Sql/NoSql</p>
+					<p>Strapi, firebase</p>
 				</motion.div>
 			</div>
 		</motion.div>

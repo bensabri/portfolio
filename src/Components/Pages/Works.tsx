@@ -22,8 +22,6 @@ const Works: FC<Props> = ({ worksL }) => {
 	const navigate = useNavigate();
 
 	const arrowStyles = {
-		// Needs testing
-		// position: 'absolute',
 		zIndex: 2,
 		top: 'calc(50% - 15px)',
 		width: 50,

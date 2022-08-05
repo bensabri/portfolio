@@ -38,7 +38,6 @@ const Navbar: FC<Props> = ({ setOpen, isOpen, navLang }) => {
 				variants={ulList}
 				className="font-display leading-tight flex flex-col h-full justify-around text-center font-medium"
 			>
-				{/* <motion.div className="overflow-hidden"> */}
 				<Link to="/">
 					<motion.span
 						onClick={() => setOpen(false)}
