@@ -71,7 +71,6 @@ const Works: FC<Props> = ({ worksL }) => {
 									position: 'absolute',
 								}}
 								onClick={onClickHandler}
-								// className="hover:bg-gray-400 hover:opacity-20 rounded-full"
 							/>
 						)
 					}

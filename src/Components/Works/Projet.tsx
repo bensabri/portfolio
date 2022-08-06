@@ -95,7 +95,7 @@ const Projet: FC<Props> = ({
 						whileInView={{ opacity: 1, scale: 1 }}
 						transition={{ delay: 0.3, duration: 0.7 }}
 						src={image}
-						alt=""
+						alt={image}
 					/>
 				</div>
 			)}
