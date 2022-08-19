@@ -21,8 +21,8 @@ interface Props {
 }
 
 const Contact: FC<Props> = ({ contactL }) => {
-	const [sent, setSent] = useState(false);
-	const [opened, setOpened] = useState(false);
+	const [sent, setSent] = useState<boolean>(false);
+	const [opened, setOpened] = useState<boolean>(false);
 
 	const navigate = useNavigate();
 
