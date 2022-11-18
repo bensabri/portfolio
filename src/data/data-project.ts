@@ -40,7 +40,7 @@ export const projectList = [
 		stack: 'react, firebase',
 		projectNum: 4,
 		image: photo4,
-		url: 'https://infm-live.fr',
+		url: 'https://voluble-cassata-5b1d2b.netlify.app/',
 	},
 	{
 		title: ['v', 'o', 't', 'e', '-', 'u', 'n', 's', 'a'],
