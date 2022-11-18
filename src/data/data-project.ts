@@ -8,15 +8,6 @@ import photo7 from '../assets/medinah-1.png';
 
 export const projectList = [
 	{
-		title: ['c', 'i', 't', 'y', ' ', 'b', 'i', 'k', 'e'],
-		description:
-			"Conception d'un site web interactif de location de vélos via une carte des stations libre",
-		stack: 'vanila javascript',
-		projectNum: 1,
-		image: photo1,
-		url: 'https://citybikev1.netlify.app',
-	},
-	{
 		title: ['i', 'm', 'm', 'o', 'b', 'i', 'l', 'i', 'e', 'r'],
 		description: "Conception d'un site web pour une agence immobilière",
 		stack: 'wordpress',
