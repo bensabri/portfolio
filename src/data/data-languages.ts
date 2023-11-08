@@ -1,7 +1,7 @@
-import photo2 from '../assets/jerba-immo.png';
-import photo3 from '../assets/weather-live.png';
-import photo4 from '../assets/infm-img.png';
-import photo5 from '../assets/vote-app-img.jpg';
+import img1 from '../assets/jerba-immo.jpg';
+import img2 from '../assets/weather-live.jpg';
+import img3 from '../assets/infm-img.jpg';
+import img4 from '../assets/vote-app-img.jpg';
 
 export const navBarLang = [
 	{
@@ -65,7 +65,7 @@ export const projectListLang = [
 					'Create a real estate web site located in Djerba Tunisia',
 				stack: 'wordpress',
 				projectNum: 1,
-				image: photo2,
+				image: img1,
 				url: 'https://jerbaimmo.com',
 				btn: 'Visit',
 			},
@@ -88,7 +88,7 @@ export const projectListLang = [
 					'Create a PWA weather app with a background video live of the city selected, only a few cities are available with video live',
 				stack: 'react',
 				projectNum: 2,
-				image: photo3,
+				image: img2,
 				url: 'https://weather-app-livevideo.netlify.app',
 				btn: 'Visit',
 			},
@@ -98,7 +98,7 @@ export const projectListLang = [
 					'External member area for the infm.fr site which gives access to premium training videos',
 				stack: 'react, firebase',
 				projectNum: 3,
-				image: photo4,
+				image: img3,
 				url: 'https://voluble-cassata-5b1d2b.netlify.app',
 				btn: 'Visit',
 			},
@@ -108,7 +108,7 @@ export const projectListLang = [
 					'Create a voting web app for UNSA syndicat based in france',
 				stack: 'react, firebase',
 				projectNum: 4,
-				image: photo5,
+				image: img4,
 				url: 'https://unsa-fcs.fr',
 				btn: 'Visit',
 			},
@@ -120,7 +120,7 @@ export const projectListLang = [
 					"Conception d'un site web pour une agence immobilière",
 				stack: 'wordpress',
 				projectNum: 1,
-				image: photo2,
+				image: img1,
 				url: 'https://jerbaimmo.com',
 				btn: 'Visiter',
 			},
@@ -130,7 +130,7 @@ export const projectListLang = [
 					"Conception d'une PWA météo avec pour fond d'écran la vidéo en direct de la ville sélectionné, seul quelque ville sont disponibles",
 				stack: 'react',
 				projectNum: 2,
-				image: photo3,
+				image: img2,
 				url: 'https://weather-app-livevideo.netlify.app',
 				btn: 'Visiter',
 			},
@@ -140,7 +140,7 @@ export const projectListLang = [
 					"Conception d'un espace membre externe pour le site infm.fr qui donne accès à des vidéos de formations premium",
 				stack: 'react, firebase',
 				projectNum: 3,
-				image: photo4,
+				image: img3,
 				url: 'https://voluble-cassata-5b1d2b.netlify.app',
 				btn: 'Visiter',
 			},
@@ -150,7 +150,7 @@ export const projectListLang = [
 					"Conception d'une application web de vote pour le syndicat UNSA",
 				stack: 'react, firebase',
 				projectNum: 4,
-				image: photo5,
+				image: img4,
 				url: 'https://unsa-fcs.fr',
 				btn: 'Visiter',
 			},
