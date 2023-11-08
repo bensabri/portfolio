@@ -24,7 +24,7 @@ const Header: FC<Props> = ({ navLang }) => {
 					Sabri Ben ayed
 				</h2>
 				<div className="z-50 flex items-center space-x-5 md:space-x-10">
-					<a
+					{/* <a
 						href={cvSabri}
 						className="font-bold hover:opacity-50 transition-opacity cursor-pointer"
 						target="_blank"
@@ -33,7 +33,7 @@ const Header: FC<Props> = ({ navLang }) => {
 						download
 					>
 						CV
-					</a>
+					</a> */}
 					<a
 						href="https://github.com/bensabri"
 						target="_blank"
