@@ -1,10 +1,7 @@
-import photo1 from '../assets/city-bikev1.png';
 import photo2 from '../assets/jerba-immo.png';
 import photo3 from '../assets/weather-live.png';
 import photo4 from '../assets/infm-img.png';
 import photo5 from '../assets/vote-app-img.jpg';
-import photo6 from '../assets/pomme-de-pain-crepes.png';
-import photo7 from '../assets/medinah-1.png';
 
 export const projectList = [
 	{
@@ -41,23 +38,5 @@ export const projectList = [
 		projectNum: 5,
 		image: photo5,
 		url: 'https://unsa-fcs.fr',
-	},
-	{
-		title: ['c', 'r', 'e', 'p', 'e', 's'],
-		description:
-			"Conception d'une application web pour commande des crêpes et payer en ligne",
-		stack: 'nextJs, strapi, graphQl',
-		projectNum: 6,
-		image: photo6,
-		url: 'https://crepes-ashy.vercel.app',
-	},
-	{
-		title: ['m', 'a', 'r', 'k', 'e', 't', ' ', 'p', 'l', 'a', 'c', 'e'],
-		description:
-			"Conception d'un site web ecommerce où les vendeurs s'inscrivent et proposent leurs produits à la vente",
-		stack: 'nextJs, strapi, graphQl',
-		projectNum: 7,
-		image: photo7,
-		url: 'https://www.medinah-store.com',
 	},
 ];

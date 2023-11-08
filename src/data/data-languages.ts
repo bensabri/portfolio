@@ -1,10 +1,7 @@
-import photo1 from '../assets/city-bikev1.png';
 import photo2 from '../assets/jerba-immo.png';
 import photo3 from '../assets/weather-live.png';
 import photo4 from '../assets/infm-img.png';
 import photo5 from '../assets/vote-app-img.jpg';
-import photo6 from '../assets/pomme-de-pain-crepes.png';
-import photo7 from '../assets/medinah-1.png';
 
 export const navBarLang = [
 	{
@@ -102,7 +99,7 @@ export const projectListLang = [
 				stack: 'react, firebase',
 				projectNum: 3,
 				image: photo4,
-				url: 'https://infm-live.fr',
+				url: 'https://voluble-cassata-5b1d2b.netlify.app',
 				btn: 'Visit',
 			},
 			{
@@ -115,42 +112,8 @@ export const projectListLang = [
 				url: 'https://unsa-fcs.fr',
 				btn: 'Visit',
 			},
-			{
-				title: ['c', 'r', 'e', 'p', 'e', 's'],
-				description:
-					'Create an ordering web app to choose your crepes in the restaurant customise the ingredients and pay it online.',
-				stack: 'nextJs, strapi, graphQl',
-				projectNum: 5,
-				image: photo6,
-				url: 'https://crepes-ashy.vercel.app',
-				btn: 'Visit',
-			},
-			{
-				title: [
-					'm',
-					'a',
-					'r',
-					'k',
-					'e',
-					't',
-					' ',
-					'p',
-					'l',
-					'a',
-					'c',
-					'e',
-				],
-				description:
-					'An e-commerce market place where sellers can add their product in the database via the admin panel, then the administrator of the e-commerce decides whether to publish the product or not.',
-				stack: 'nextJs, strapi, graphQl',
-				projectNum: 6,
-				image: photo7,
-				url: 'https://www.medinah-store.com',
-				btn: 'Visit',
-			},
 		],
 		worksFr: [
-			
 			{
 				title: ['i', 'm', 'm', 'o', 'b', 'i', 'l', 'i', 'e', 'r'],
 				description:
@@ -178,7 +141,7 @@ export const projectListLang = [
 				stack: 'react, firebase',
 				projectNum: 3,
 				image: photo4,
-				url: 'https://infm-live.fr',
+				url: 'https://voluble-cassata-5b1d2b.netlify.app',
 				btn: 'Visiter',
 			},
 			{
@@ -189,39 +152,6 @@ export const projectListLang = [
 				projectNum: 4,
 				image: photo5,
 				url: 'https://unsa-fcs.fr',
-				btn: 'Visiter',
-			},
-			{
-				title: ['c', 'r', 'e', 'p', 'e', 's'],
-				description:
-					"Conception d'une application web pour commande des crêpes et payer en ligne",
-				stack: 'nextJs, strapi, graphQl',
-				projectNum: 5,
-				image: photo6,
-				url: 'https://crepes-ashy.vercel.app',
-				btn: 'Visiter',
-			},
-			{
-				title: [
-					'm',
-					'a',
-					'r',
-					'k',
-					'e',
-					't',
-					' ',
-					'p',
-					'l',
-					'a',
-					'c',
-					'e',
-				],
-				description:
-					"Conception d'un site web ecommerce où les vendeurs s'inscrivent et proposent leurs produits à la vente",
-				stack: 'nextJs, strapi, graphQl',
-				projectNum: 6,
-				image: photo7,
-				url: 'https://www.medinah-store.com',
 				btn: 'Visiter',
 			},
 		],

@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import NavList from './NavList';
 import { FC } from 'react';
-import cvSabri from '../assets/CV-SABRI.pdf';
 
 interface Props {
 	navLang: {
@@ -24,16 +23,6 @@ const Header: FC<Props> = ({ navLang }) => {
 					Sabri Ben ayed
 				</h2>
 				<div className="z-50 flex items-center space-x-5 md:space-x-10">
-					{/* <a
-						href={cvSabri}
-						className="font-bold hover:opacity-50 transition-opacity cursor-pointer"
-						target="_blank"
-						rel="noreferrer"
-						title="Télécharger mon cv"
-						download
-					>
-						CV
-					</a> */}
 					<a
 						href="https://github.com/bensabri"
 						target="_blank"
