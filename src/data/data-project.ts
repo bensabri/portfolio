@@ -39,4 +39,13 @@ export const projectList = [
 		image: photo5,
 		url: 'https://unsa-fcs.fr',
 	},
+	{
+		title: ['m', 'e', 'n', 'u'],
+		description:
+			"Conception d'une solution de menu sans contact pour un restaurant en tunisie",
+		stack: 'nextjs, sanity',
+		projectNum: 6,
+		image: photo5,
+		url: 'https://atable-menzel.vercel.app/?table=2',
+	},
 ];
